@@ -1,0 +1,27 @@
+
+name: cups-security-lab
+
+services:
+  victim:
+    image: vulhub/cups-browsed:2.0.1
+    platform: linux/amd64
+    container_name: cups-victim
+    networks:
+      cups-lab:
+        ipv4_address: 172.28.77.20
+
+  printer:
+    build:
+      context: .
+      dockerfile: Dockerfile.printer
+    container_name: cups-printer
+    networks:
+      cups-lab:
+        ipv4_address: 172.28.77.30
+
+networks:
+  cups-lab:
+    internal: true
+    ipam:
+      config:
+        - subnet: 172.28.77.0/24

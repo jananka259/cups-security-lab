@@ -1,0 +1,18 @@
+Starting system message bus: dbus.
+Tue Nov  3 15:12:16 2026 140737439859648 Reading command line option --debug, turning on debug mode (Log on standard error).
+Tue Nov  3 15:12:16 2026 140737439859648 cups-browsed version 2.0.1 starting.
+Tue Nov  3 15:12:16 2026 140737439859648 Reading config: BrowseRemoteProtocols cups
+Tue Nov  3 15:12:16 2026 140737439859648 Reading config: BrowseOrder Allow,Deny
+Tue Nov  3 15:12:16 2026 140737439859648 Reading config: BrowseFilter host 172.28.77.30
+Tue Nov  3 15:12:16 2026 140737439859648 main() in THREAD 140737439859648
+Tue Nov  3 15:12:16 2026 140737439859648 cups-browsed: Creating http connection to local CUPS daemon via domain socket: /run/cups/cups.sock
+Tue Nov  3 15:12:16 2026 140737439859648 update_netifs() in THREAD 140737439859648
+Tue Nov  3 15:12:16 2026 140737439859648 Network interfaces: lo (127.0.0.1, localhost), eth0 (172.28.77.20, 3a989104c8a5, 172.28.77.20*), lo (::1)
+Tue Nov  3 15:12:16 2026 140737439859648 cups-browsed [BrowsePoll /run/cups/cups.sock:0]: IPP-Create-Subscription
+Tue Nov  3 15:12:16 2026 140737439859648 cups-browsed [BrowsePoll /run/cups/cups.sock:0]: subscription ID=1
+Tue Nov  3 15:12:16 2026 140737439859648 cups-browsed (): cupsEnumDests
+Tue Nov  3 15:12:16 2026 140737439859648 Could not determine system default printer!
+Tue Nov  3 15:12:16 2026 140737439859648 Using signal handler SIGACTION
+Tue Nov  3 15:12:17 2026 140737439859648 listening
+Tue Nov  3 15:12:18 2026 140737439859648 process_browse_data() in THREAD 140737439859648
+Tue Nov  3 15:12:18 2026 140737439859648 browse packet from 172.28.77.30 disallowed

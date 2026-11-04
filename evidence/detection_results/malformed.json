@@ -1,0 +1,10 @@
+[
+  {
+    "timestamp": 1793718656.764826,
+    "type": "malformed_discovery",
+    "severity": "high",
+    "src": "172.28.77.40",
+    "dst": "172.28.77.20",
+    "detail": "fewer than three fields"
+  }
+]

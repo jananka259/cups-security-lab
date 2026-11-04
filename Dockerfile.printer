@@ -1,0 +1,13 @@
+
+FROM ubuntu:24.04
+
+RUN apt-get update \
+    && apt-get install -y --no-install-recommends \
+    ippsample \
+    avahi-daemon \
+    dbus \
+    && rm -rf /var/lib/apt/lists/*
+
+EXPOSE 631/tcp
+
+CMD ["sh", "-c", "mkdir -p /run/dbus && dbus-daemon --system --fork && avahi-daemon --daemonize --no-chroot && exec ippserver -p 631 -vvv 'Lab Printer'"]

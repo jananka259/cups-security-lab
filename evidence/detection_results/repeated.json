@@ -1,0 +1,58 @@
+[
+  {
+    "timestamp": 1793718653.464902,
+    "type": "unauthorized_advertisement",
+    "severity": "high",
+    "src": "172.28.77.40",
+    "dst": "172.28.77.20",
+    "detail": "advertiser 172.28.77.40 is not allowlisted"
+  },
+  {
+    "timestamp": 1793718653.464902,
+    "type": "suspicious_printer_endpoint",
+    "severity": "medium",
+    "src": "172.28.77.40",
+    "dst": "172.28.77.20",
+    "detail": "advertised endpoint 172.28.77.40:631"
+  },
+  {
+    "timestamp": 1793718653.46559,
+    "type": "unauthorized_advertisement",
+    "severity": "high",
+    "src": "172.28.77.40",
+    "dst": "172.28.77.20",
+    "detail": "advertiser 172.28.77.40 is not allowlisted"
+  },
+  {
+    "timestamp": 1793718653.46559,
+    "type": "suspicious_printer_endpoint",
+    "severity": "medium",
+    "src": "172.28.77.40",
+    "dst": "172.28.77.20",
+    "detail": "advertised endpoint 172.28.77.40:631"
+  },
+  {
+    "timestamp": 1793718653.466191,
+    "type": "unauthorized_advertisement",
+    "severity": "high",
+    "src": "172.28.77.40",
+    "dst": "172.28.77.20",
+    "detail": "advertiser 172.28.77.40 is not allowlisted"
+  },
+  {
+    "timestamp": 1793718653.466191,
+    "type": "suspicious_printer_endpoint",
+    "severity": "medium",
+    "src": "172.28.77.40",
+    "dst": "172.28.77.20",
+    "detail": "advertised endpoint 172.28.77.40:631"
+  },
+  {
+    "timestamp": 1793718653.464902,
+    "type": "repeated_discovery",
+    "severity": "medium",
+    "src": "172.28.77.40",
+    "dst": "172.28.77.20",
+    "detail": "same advertisement observed 3 times"
+  }
+]

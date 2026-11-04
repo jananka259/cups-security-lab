@@ -1,0 +1,4 @@
+services:
+  victim:
+    volumes:
+      - ./mitigation/cups-browsed.conf:/etc/cups/cups-browsed.conf:ro

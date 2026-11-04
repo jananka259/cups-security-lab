@@ -1,0 +1,3 @@
+timestamp,type,severity,src,dst,detail
+1793718655.031402,unauthorized_advertisement,high,172.28.77.40,172.28.77.20,advertiser 172.28.77.40 is not allowlisted
+1793718655.031402,suspicious_printer_endpoint,medium,172.28.77.40,172.28.77.20,advertised endpoint 172.28.77.40:99999
