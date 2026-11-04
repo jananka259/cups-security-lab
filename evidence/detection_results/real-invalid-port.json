@@ -1,0 +1,11 @@
+[
+  {
+    "timestamp": 1793811462.081854,
+    "rule_id": "DISCOVERY-003",
+    "type": "malformed_discovery",
+    "severity": "high",
+    "src": "172.28.77.10",
+    "dst": "172.28.77.20",
+    "detail": "IPP URI contains an invalid port"
+  }
+]

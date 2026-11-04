@@ -2,6 +2,24 @@
 name: cups-security-lab
 
 services:
+  attacker:
+    build:
+      context: .
+      dockerfile: Dockerfile.attacker
+    container_name: cups-attacker
+    cap_add:
+      - NET_RAW
+    security_opt:
+      - no-new-privileges:true
+    volumes:
+      - ./cups_attack.py:/opt/lab/cups_attack.py:ro
+      - ./cups_detector.py:/opt/lab/cups_detector.py:ro
+      - ./pcap_files:/opt/lab/pcap_files
+      - ./evidence:/opt/lab/evidence
+    networks:
+      cups-lab:
+        ipv4_address: 172.28.77.10
+
   victim:
     image: vulhub/cups-browsed:2.0.1
     platform: linux/amd64
@@ -15,6 +33,8 @@ services:
       context: .
       dockerfile: Dockerfile.printer
     container_name: cups-printer
+    volumes:
+      - ./pcap_files:/lab/pcap_files
     networks:
       cups-lab:
         ipv4_address: 172.28.77.30

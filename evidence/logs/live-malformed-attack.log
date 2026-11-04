@@ -1,0 +1,2 @@
+mode=transmitted variation=malformed-fields src=172.28.77.10 dst=172.28.77.20 payload=not-a-browse-message
+mode=transmitted variation=malformed-fields src=172.28.77.10 dst=172.28.77.20 payload=not-a-browse-message

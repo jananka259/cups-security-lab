@@ -1,0 +1,2 @@
+mode=transmitted variation=baseline src=172.28.77.10 dst=172.28.77.20 payload=0 3 ipp://172.28.77.40:631/printers/lab "Lab Printer" "Lab Printer"
+mode=transmitted variation=baseline src=172.28.77.10 dst=172.28.77.20 payload=0 3 ipp://172.28.77.40:631/printers/lab "Lab Printer" "Lab Printer"

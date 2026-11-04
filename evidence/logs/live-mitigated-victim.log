@@ -1,0 +1,81 @@
+Starting system message bus: dbus.
+Wed Nov  4 16:58:41 2026 140737439859648 Reading command line option --debug, turning on debug mode (Log on standard error).
+Wed Nov  4 16:58:41 2026 140737439859648 cups-browsed version 2.0.1 starting.
+Wed Nov  4 16:58:41 2026 140737439859648 Reading config: BrowseRemoteProtocols cups
+Wed Nov  4 16:58:41 2026 140737439859648 Reading config: BrowseOrder Allow,Deny
+Wed Nov  4 16:58:41 2026 140737439859648 Reading config: BrowseAllow 172.28.77.30
+Wed Nov  4 16:58:41 2026 140737439859648 main() in THREAD 140737439859648
+Wed Nov  4 16:58:41 2026 140737439859648 cups-browsed: Creating http connection to local CUPS daemon via domain socket: /run/cups/cups.sock
+Wed Nov  4 16:58:41 2026 140737439859648 update_netifs() in THREAD 140737439859648
+Wed Nov  4 16:58:41 2026 140737439859648 Network interfaces: lo (127.0.0.1, localhost), eth0 (172.28.77.20, 2249ff423d1d, 172.28.77.20*), lo (::1)
+Wed Nov  4 16:58:41 2026 140737439859648 cups-browsed [BrowsePoll /run/cups/cups.sock:0]: IPP-Create-Subscription
+Wed Nov  4 16:58:41 2026 140737439859648 cups-browsed [BrowsePoll /run/cups/cups.sock:0]: subscription ID=1
+Wed Nov  4 16:58:41 2026 140737439859648 cups-browsed (): cupsEnumDests
+Wed Nov  4 16:58:41 2026 140737439859648 Could not determine system default printer!
+Wed Nov  4 16:58:41 2026 140737439859648 Using signal handler SIGACTION
+Wed Nov  4 16:58:42 2026 140737439859648 listening
+Wed Nov  4 16:58:43 2026 140737439859648 process_browse_data() in THREAD 140737439859648
+Wed Nov  4 16:58:43 2026 140737439859648 browse packet from 172.28.77.10 disallowed
+Wed Nov  4 16:59:13 2026 140737439859648 process_browse_data() in THREAD 140737439859648
+Wed Nov  4 16:59:13 2026 140737439859648 browse packet received from 172.28.77.30
+Wed Nov  4 16:59:13 2026 140737439859648 process_browse_data: location: |Lab Printer|
+Wed Nov  4 16:59:13 2026 140737439859648 process_browse_data: info: |Lab Printer|
+Wed Nov  4 16:59:13 2026 140737439859648 CUPS browsing: Remote host: 172.28.77.30; Port: 631; Remote queue name: lab; Service Name: Lab Printer @ 172.28.77.30
+Wed Nov  4 16:59:13 2026 140737439859648 Found CUPS queue/class: lab on host 172.28.77.30.
+Wed Nov  4 16:59:13 2026 140737439859648 cups-browsed [BrowsePoll /run/cups/cups.sock:0]: IPP-Get-Notifications
+Wed Nov  4 16:59:13 2026 140737439859648 cups-browsed [BrowsePoll /run/cups/cups.sock:0]: no events
+Wed Nov  4 16:59:13 2026 140737439859648 Matching printer "Lab_Printer_172_28_77_30" with properties Host = "172.28.77.30", Port = 631, Service Name = "Lab Printer @ 172.28.77.30", Domain = "" with the BrowseFilter lines in cups-browsed.conf
+Wed Nov  4 16:59:13 2026 140737439859648 All BrowseFilter lines matched or skipped, accepting printer Lab_Printer_172_28_77_30
+Wed Nov  4 16:59:13 2026 140737439859648 update_netifs() in THREAD 140737439859648
+Wed Nov  4 16:59:13 2026 140737439859648 Network interfaces: lo (127.0.0.1, localhost), eth0 (172.28.77.20, 2249ff423d1d, 172.28.77.20*), lo (::1)
+Wed Nov  4 16:59:13 2026 Requested IPP attributes (get-printer-attributes) for printer with URI ipp://172.28.77.30:631/printers/lab
+Wed Nov  4 16:59:13 2026 Full list of all IPP attributes:
+Wed Nov  4 16:59:13 2026   Attr: attributes-charset
+Wed Nov  4 16:59:13 2026   Value: utf-8
+Wed Nov  4 16:59:13 2026   Keyword: utf-8
+Wed Nov  4 16:59:13 2026   Attr: attributes-natural-language
+Wed Nov  4 16:59:13 2026   Value: en-us
+Wed Nov  4 16:59:13 2026   Keyword: en-us
+Wed Nov  4 16:59:13 2026   Attr: status-message
+Wed Nov  4 16:59:13 2026   Value: \"printer-uri\" 'ipp://172.28.77.30:631/printers/lab' not found.
+Wed Nov  4 16:59:13 2026   Keyword: "printer-uri" 'ipp://172.28.77.30:631/printers/lab' not found.
+Wed Nov  4 16:59:13 2026 get-printer-attributes IPP request failed:
+Wed Nov  4 16:59:13 2026   - Required IPP attribute uri-security-supported not found
+Wed Nov  4 16:59:13 2026   - Too few IPP attributes: 3 (30 or more expected)
+Wed Nov  4 16:59:13 2026 The server doesn't support IPP2.0 request, trying IPP1.1 request
+Wed Nov  4 16:59:13 2026 Requested IPP attributes (get-printer-attributes) for printer with URI ipp://172.28.77.30:631/printers/lab
+Wed Nov  4 16:59:13 2026 Full list of all IPP attributes:
+Wed Nov  4 16:59:13 2026   Attr: attributes-charset
+Wed Nov  4 16:59:13 2026   Value: utf-8
+Wed Nov  4 16:59:13 2026   Keyword: utf-8
+Wed Nov  4 16:59:13 2026   Attr: attributes-natural-language
+Wed Nov  4 16:59:13 2026   Value: en-us
+Wed Nov  4 16:59:13 2026   Keyword: en-us
+Wed Nov  4 16:59:13 2026   Attr: status-message
+Wed Nov  4 16:59:13 2026   Value: \"printer-uri\" 'ipp://172.28.77.30:631/printers/lab' not found.
+Wed Nov  4 16:59:13 2026   Keyword: "printer-uri" 'ipp://172.28.77.30:631/printers/lab' not found.
+Wed Nov  4 16:59:13 2026 get-printer-attributes IPP request failed:
+Wed Nov  4 16:59:13 2026   - Required IPP attribute uri-security-supported not found
+Wed Nov  4 16:59:13 2026   - Too few IPP attributes: 6 (30 or more expected)
+Wed Nov  4 16:59:13 2026 The server doesn't support the standard IPP request, trying request without media-col
+Wed Nov  4 16:59:13 2026 Requested IPP attributes (get-printer-attributes) for printer with URI ipp://172.28.77.30:631/printers/lab
+Wed Nov  4 16:59:13 2026 Full list of all IPP attributes:
+Wed Nov  4 16:59:13 2026   Attr: attributes-charset
+Wed Nov  4 16:59:13 2026   Value: utf-8
+Wed Nov  4 16:59:13 2026   Keyword: utf-8
+Wed Nov  4 16:59:13 2026   Attr: attributes-natural-language
+Wed Nov  4 16:59:13 2026   Value: en-us
+Wed Nov  4 16:59:13 2026   Keyword: en-us
+Wed Nov  4 16:59:13 2026   Attr: status-message
+Wed Nov  4 16:59:13 2026   Value: \"printer-uri\" 'ipp://172.28.77.30:631/printers/lab' not found.
+Wed Nov  4 16:59:13 2026   Keyword: "printer-uri" 'ipp://172.28.77.30:631/printers/lab' not found.
+Wed Nov  4 16:59:13 2026 get-printer-attributes IPP request failed:
+Wed Nov  4 16:59:13 2026   - Required IPP attribute uri-security-supported not found
+Wed Nov  4 16:59:13 2026   - Too few IPP attributes: 9 (30 or more expected)
+Wed Nov  4 16:59:13 2026 No further fallback available, giving up
+Wed Nov  4 16:59:13 2026
+Wed Nov  4 16:59:13 2026 140737439859648 get-printer-attributes IPP call failed on printer Lab_Printer_172_28_77_30 (ipp://172.28.77.30:631/printers/lab).
+Wed Nov  4 16:59:13 2026 140737439859648 ERROR: Unable to create print queue, ignoring printer.
+Wed Nov  4 16:59:13 2026 140737439859648 listening
+Wed Nov  4 16:59:41 2026 140737439859648 process_browse_data() in THREAD 140737439859648
+Wed Nov  4 16:59:41 2026 140737439859648 browse packet from 172.28.77.10 disallowed

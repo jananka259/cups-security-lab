@@ -1,0 +1,621 @@
+2026-11-04T16:52:21.089Z  Using default configuration with a single printer.
+2026-11-04T16:52:21.116Z  Using default data directory "/tmp/ippserver.1".
+2026-11-04T16:52:21.116Z  Using default spool directory "/tmp/ippserver.1".
+Ignore Avahi state 1.
+2026-11-04T16:52:21.118Z  Using default listeners for f92c3983f98d:631.
+2026-11-04T16:52:21.119Z  serverCreatePrinter(resource="/ipp/print", name="Lab Printer", pinfo=0xfffff0536500)
+2026-11-04T16:52:21.120Z  Using ppm=0
+2026-11-04T16:52:21.120Z  Using ppm_color=0
+2026-11-04T16:52:21.120Z  [Printer Lab Printer] printer-uri="ipp://f92c3983f98d:631/ipp/print"
+2026-11-04T16:52:21.120Z  [Printer Lab Printer] printer-more-info="https://f92c3983f98d:631/ipp/print"
+2026-11-04T16:52:21.121Z  [Printer Lab Printer] printer-supply-info-uri="https://f92c3983f98d:631/ipp/print/supplies"
+2026-11-04T16:52:21.126Z  [Printer Lab Printer] version=2.0
+2026-11-04T16:52:21.126Z  [Printer Lab Printer] request-id=0
+2026-11-04T16:52:21.126Z  [Printer Lab Printer] printer-attributes-tag
+2026-11-04T16:52:21.126Z  [Printer Lab Printer] charset-configured (charset) utf-8
+2026-11-04T16:52:21.126Z  [Printer Lab Printer] charset-supported (1setOf charset) us-ascii,utf-8
+2026-11-04T16:52:21.126Z  [Printer Lab Printer] color-supported (boolean) false
+2026-11-04T16:52:21.126Z  [Printer Lab Printer] compression-supported (1setOf keyword) deflate,gzip,none
+2026-11-04T16:52:21.126Z  [Printer Lab Printer] copies-default (integer) 1
+2026-11-04T16:52:21.126Z  [Printer Lab Printer] copies-supported (rangeOfInteger) 1-999
+2026-11-04T16:52:21.126Z  [Printer Lab Printer] document-format-default (mimeMediaType) application/pdf
+2026-11-04T16:52:21.126Z  [Printer Lab Printer] document-format-supported (1setOf mimeMediaType) application/pdf,image/jpeg,image/pwg-raster
+2026-11-04T16:52:21.126Z  [Printer Lab Printer] document-password-supported (integer) 127
+2026-11-04T16:52:21.126Z  [Printer Lab Printer] finishings-default (enum) none
+2026-11-04T16:52:21.126Z  [Printer Lab Printer] finishings-supported (enum) none
+2026-11-04T16:52:21.126Z  [Printer Lab Printer] generated-natural-language-supported (naturalLanguage) en
+2026-11-04T16:52:21.126Z  [Printer Lab Printer] identify-actions-default (keyword) sound
+2026-11-04T16:52:21.126Z  [Printer Lab Printer] identify-actions-supported (1setOf keyword) display,sound
+2026-11-04T16:52:21.126Z  [Printer Lab Printer] ipp-features-supported (1setOf keyword) document-object,ipp-everywhere,infrastructure-printer,page-overrides
+2026-11-04T16:52:21.126Z  [Printer Lab Printer] ipp-versions-supported (1setOf keyword) 1.0,1.1,2.0
+2026-11-04T16:52:21.126Z  [Printer Lab Printer] ippget-event-life (integer) 300
+2026-11-04T16:52:21.126Z  [Printer Lab Printer] job-account-id-default (nameWithoutLanguage)
+2026-11-04T16:52:21.126Z  [Printer Lab Printer] job-account-id-supported (boolean) true
+2026-11-04T16:52:21.126Z  [Printer Lab Printer] job-accounting-user-id-default (nameWithoutLanguage)
+2026-11-04T16:52:21.126Z  [Printer Lab Printer] job-accounting-user-id-supported (boolean) true
+2026-11-04T16:52:21.126Z  [Printer Lab Printer] job-creation-attributes-supported (1setOf keyword) copies,ipp-attribute-fidelity,job-account-id,job-accounting-user-id,job-name,job-password,job-priority,media,media-col,multiple-document-handling,orientation-requested,print-quality,sides
+2026-11-04T16:52:21.126Z  [Printer Lab Printer] job-ids-supported (boolean) true
+2026-11-04T16:52:21.126Z  [Printer Lab Printer] job-k-octets-supported (rangeOfInteger) 0-234492896
+2026-11-04T16:52:21.126Z  [Printer Lab Printer] job-password-encryption-supported (keyword) none
+2026-11-04T16:52:21.126Z  [Printer Lab Printer] job-password-supported (integer) 4
+2026-11-04T16:52:21.126Z  [Printer Lab Printer] job-priority-default (integer) 50
+2026-11-04T16:52:21.126Z  [Printer Lab Printer] job-priority-supported (integer) 100
+2026-11-04T16:52:21.126Z  [Printer Lab Printer] job-sheets-default (nameWithoutLanguage) none
+2026-11-04T16:52:21.126Z  [Printer Lab Printer] job-sheets-supported (nameWithoutLanguage) none
+2026-11-04T16:52:21.126Z  [Printer Lab Printer] media-bottom-margin-supported (integer) 635
+2026-11-04T16:52:21.126Z  [Printer Lab Printer] media-col-database (1setOf collection) {media-key=na_letter_8.5x11in media-size={x-dimension=21590 y-dimension=27940} media-size-name=na_letter_8.5x11in media-bottom-margin=635 media-left-margin=635 media-right-margin=635 media-top-margin=635},{media-key=na_legal_8.5x14in media-size={x-dimension=21590 y-dimension=35560} media-size-name=na_legal_8.5x14in media-bottom-margin=635 media-left-margin=635 media-right-margin=635 media-top-margin=635},{media-key=iso_a4_210x297mm media-size={x-dimension=21000 y-dimension=29700} media-size-name=iso_a4_210x297mm media-bottom-margin=635 media-left-margin=635 media-right-margin=635 media-top-margin=635}
+2026-11-04T16:52:21.126Z  [Printer Lab Printer] media-col-default (collection) {media-key=na_letter_8.5x11in media-size={x-dimension=21590 y-dimension=27940} media-size-name=na_letter_8.5x11in media-bottom-margin=635 media-left-margin=635 media-right-margin=635 media-top-margin=635}
+2026-11-04T16:52:21.126Z  [Printer Lab Printer] media-col-ready (collection) {media-key=na_letter_8.5x11in_main media-size={x-dimension=21590 y-dimension=27940} media-size-name=na_letter_8.5x11in media-bottom-margin=635 media-left-margin=635 media-right-margin=635 media-top-margin=635 media-source=main}
+2026-11-04T16:52:21.126Z  [Printer Lab Printer] media-default (keyword) na_letter_8.5x11in
+2026-11-04T16:52:21.126Z  [Printer Lab Printer] media-left-margin-supported (integer) 635
+2026-11-04T16:52:21.126Z  [Printer Lab Printer] media-ready (keyword) na_letter_8.5x11in
+2026-11-04T16:52:21.126Z  [Printer Lab Printer] media-right-margin-supported (integer) 635
+2026-11-04T16:52:21.126Z  [Printer Lab Printer] media-supported (1setOf keyword) na_letter_8.5x11in,na_legal_8.5x14in,iso_a4_210x297mm
+2026-11-04T16:52:21.126Z  [Printer Lab Printer] media-size-supported (1setOf collection) {x-dimension=21590 y-dimension=27940},{x-dimension=21590 y-dimension=35560},{x-dimension=21000 y-dimension=29700}
+2026-11-04T16:52:21.126Z  [Printer Lab Printer] media-source-supported (keyword) main
+2026-11-04T16:52:21.126Z  [Printer Lab Printer] media-top-margin-supported (integer) 635
+2026-11-04T16:52:21.126Z  [Printer Lab Printer] media-type-supported (keyword) auto
+2026-11-04T16:52:21.126Z  [Printer Lab Printer] media-col-supported (1setOf keyword) media-bottom-margin,media-left-margin,media-right-margin,media-size,media-size-name,media-source,media-top-margin,media-type
+2026-11-04T16:52:21.126Z  [Printer Lab Printer] multiple-document-handling-supported (1setOf keyword) separate-documents-uncollated-copies,separate-documents-collated-copies
+2026-11-04T16:52:21.126Z  [Printer Lab Printer] multiple-document-jobs-supported (boolean) false
+2026-11-04T16:52:21.126Z  [Printer Lab Printer] multiple-operation-time-out (integer) 60
+2026-11-04T16:52:21.126Z  [Printer Lab Printer] multiple-operation-time-out-action (keyword) abort-job
+2026-11-04T16:52:21.126Z  [Printer Lab Printer] natural-language-configured (naturalLanguage) en
+2026-11-04T16:52:21.126Z  [Printer Lab Printer] notify-attributes-supported (1setOf keyword) printer-state-change-time,notify-lease-expiration-time,notify-subscriber-user-name
+2026-11-04T16:52:21.126Z  [Printer Lab Printer] notify-events-default (keyword) job-completed
+2026-11-04T16:52:21.126Z  [Printer Lab Printer] notify-events-supported (1setOf keyword) document-completed,document-config-changed,document-created,document-fetchable,document-state-changed,document-stopped,job-completed,job-config-changed,job-created,job-fetchable,job-progress,job-state-changed,job-stopped,printer-config-changed,printer-finishings-changed,printer-media-changed,printer-queue-order-changed,printer-restarted,printer-shutdown,printer-state-changed,printer-stopped
+2026-11-04T16:52:21.126Z  [Printer Lab Printer] notify-lease-duration-default (integer) 86400
+2026-11-04T16:52:21.126Z  [Printer Lab Printer] notify-lease-duration-supported (rangeOfInteger) 0-67108863
+2026-11-04T16:52:21.126Z  [Printer Lab Printer] notify-max-events-supported (integer) 21
+2026-11-04T16:52:21.126Z  [Printer Lab Printer] notify-pull-method-supported (keyword) ippget
+2026-11-04T16:52:21.126Z  [Printer Lab Printer] number-up-default (integer) 1
+2026-11-04T16:52:21.126Z  [Printer Lab Printer] number-up-supported (integer) 1
+2026-11-04T16:52:21.126Z  [Printer Lab Printer] operations-supported (1setOf enum) Print-Job,Print-URI,Validate-Job,Create-Job,Send-Document,Send-URI,Cancel-Job,Get-Job-Attributes,Get-Jobs,Get-Printer-Attributes,Get-Printer-Supported-Values,Create-Printer-Subscriptions,Create-Job-Subscriptions,Get-Subscription-Attributes,Get-Subscriptions,Renew-Subscription,Cancel-Subscription,Get-Notifications,Get-Document-Attributes,Get-Documents,Cancel-My-Jobs,Close-Job,Identify-Printer,Validate-Document,Acknowledge-Document,Acknowledge-Identify-Printer,Acknowledge-Job,Fetch-Document,Fetch-Job,Get-Output-Device-Attributes,Update-Active-Jobs,Update-Document-Status,Update-Job-Status,Update-Output-Device-Attributes,Deregister-Output-Device
+2026-11-04T16:52:21.126Z  [Printer Lab Printer] orientation-requested-default (no-value) no-value
+2026-11-04T16:52:21.126Z  [Printer Lab Printer] orientation-requested-supported (1setOf enum) portrait,landscape,reverse-landscape,reverse-portrait
+2026-11-04T16:52:21.126Z  [Printer Lab Printer] output-bin-default (keyword) face-down
+2026-11-04T16:52:21.126Z  [Printer Lab Printer] output-bin-supported (keyword) face-down
+2026-11-04T16:52:21.126Z  [Printer Lab Printer] overrides-supported (1setOf keyword) document-number,pages
+2026-11-04T16:52:21.126Z  [Printer Lab Printer] page-ranges-supported (boolean) true
+2026-11-04T16:52:21.126Z  [Printer Lab Printer] pages-per-minute (integer) 0
+2026-11-04T16:52:21.126Z  [Printer Lab Printer] pdl-override-supported (keyword) attempted
+2026-11-04T16:52:21.126Z  [Printer Lab Printer] preferred-attributes-supported (boolean) false
+2026-11-04T16:52:21.126Z  [Printer Lab Printer] print-color-mode-default (keyword) auto
+2026-11-04T16:52:21.126Z  [Printer Lab Printer] print-color-mode-supported (1setOf keyword) auto,color,monochrome
+2026-11-04T16:52:21.126Z  [Printer Lab Printer] print-content-optimize-default (keyword) auto
+2026-11-04T16:52:21.126Z  [Printer Lab Printer] print-content-optimize-supported (keyword) auto
+2026-11-04T16:52:21.126Z  [Printer Lab Printer] print-rendering-intent-default (keyword) auto
+2026-11-04T16:52:21.126Z  [Printer Lab Printer] print-rendering-intent-supported (keyword) auto
+2026-11-04T16:52:21.126Z  [Printer Lab Printer] print-quality-default (enum) normal
+2026-11-04T16:52:21.126Z  [Printer Lab Printer] print-quality-supported (1setOf enum) draft,normal,high
+2026-11-04T16:52:21.126Z  [Printer Lab Printer] printer-device-id (textWithoutLanguage) MFG:Test;MDL:Printer;CMD:PDF,JPEG,image/pwg-raster;
+2026-11-04T16:52:21.126Z  [Printer Lab Printer] printer-get-attributes-supported (keyword) document-format
+2026-11-04T16:52:21.126Z  [Printer Lab Printer] printer-geo-location (unknown) unknown
+2026-11-04T16:52:21.126Z  [Printer Lab Printer] printer-icons (uri) https://f92c3983f98d:631/ipp/print/icon.png
+2026-11-04T16:52:21.126Z  [Printer Lab Printer] printer-info (textWithoutLanguage) Lab Printer
+2026-11-04T16:52:21.126Z  [Printer Lab Printer] printer-is-accepting-jobs (boolean) true
+2026-11-04T16:52:21.126Z  [Printer Lab Printer] printer-input-tray (octetString) type=sheetFeedAutoRemovableTray;mediafeed=0;mediaxfeed=0;maxcapacity=250;level=100;status=0;name=main;
+2026-11-04T16:52:21.126Z  [Printer Lab Printer] printer-location (textWithoutLanguage)
+2026-11-04T16:52:21.126Z  [Printer Lab Printer] printer-make-and-model (textWithoutLanguage) Test Printer
+2026-11-04T16:52:21.126Z  [Printer Lab Printer] printer-more-info (uri) https://f92c3983f98d:631/ipp/print
+2026-11-04T16:52:21.126Z  [Printer Lab Printer] printer-name (nameWithoutLanguage) Lab Printer
+2026-11-04T16:52:21.126Z  [Printer Lab Printer] printer-organization (textWithoutLanguage) Apple Inc.
+2026-11-04T16:52:21.126Z  [Printer Lab Printer] printer-organizational-unit (textWithoutLanguage) Printing Engineering
+2026-11-04T16:52:21.126Z  [Printer Lab Printer] printer-resolution-default (resolution) 600dpi
+2026-11-04T16:52:21.126Z  [Printer Lab Printer] printer-resolution-supported (resolution) 600dpi
+2026-11-04T16:52:21.126Z  [Printer Lab Printer] printer-supply (1setOf octetString) index=1;class=receptacleThatIsFilled;type=wasteToner;unit=percent;maxcapacity=100;level=67;colorantname=unknown;,index=2;class=supplyThatIsConsumed;type=toner;unit=percent;maxcapacity=100;level=100;colorantname=black;
+2026-11-04T16:52:21.126Z  [Printer Lab Printer] printer-supply-description (1setOf textWithoutLanguage) Toner Waste,Black Toner
+2026-11-04T16:52:21.126Z  [Printer Lab Printer] printer-supply-info-uri (uri) https://f92c3983f98d:631/ipp/print/supplies
+2026-11-04T16:52:21.126Z  [Printer Lab Printer] printer-uri-supported (uri) ipp://f92c3983f98d:631/ipp/print
+2026-11-04T16:52:21.126Z  [Printer Lab Printer] printer-uuid (uri) urn:uuid:86592842-7344-310f-7d78-f4b898f1fba1
+2026-11-04T16:52:21.126Z  [Printer Lab Printer] printer-xri-supported (collection) {xri-authentication=none xri-security=tls xri-uri=ipp://f92c3983f98d:631/ipp/print}
+2026-11-04T16:52:21.126Z  [Printer Lab Printer] pwg-raster-document-resolution-supported (1setOf resolution) 150dpi,300dpi
+2026-11-04T16:52:21.126Z  [Printer Lab Printer] pwg-raster-document-sheet-back (keyword) normal
+2026-11-04T16:52:21.126Z  [Printer Lab Printer] pwg-raster-document-type-supported (1setOf keyword) black_1,cmyk_8,sgray_8,srgb_8,srgb_16
+2026-11-04T16:52:21.126Z  [Printer Lab Printer] reference-uri-schemes-supported (1setOf uriScheme) file,ftp,http,https
+2026-11-04T16:52:21.126Z  [Printer Lab Printer] sides-default (keyword) one-sided
+2026-11-04T16:52:21.126Z  [Printer Lab Printer] sides-supported (keyword) one-sided
+2026-11-04T16:52:21.126Z  [Printer Lab Printer] uri-authentication-supported (keyword)
+2026-11-04T16:52:21.126Z  [Printer Lab Printer] uri-security-supported (keyword)
+2026-11-04T16:52:21.126Z  [Printer Lab Printer] which-jobs-supported (1setOf keyword) completed,not-completed,aborted,all,canceled,pending,pending-held,processing,processing-stopped
+2026-11-04T16:52:21.137Z  serverRun: 1 printers configured.
+2026-11-04T16:52:21.137Z  serverRun: 2 listeners configured.
+Ignore Avahi state 2.
+2026-11-04T16:54:13.921Z  serverRun: Incoming connection on listener f92c3983f98d:631.
+2026-11-04T16:54:13.924Z  [Client 1] Accepted connection from "172.28.77.20".
+2026-11-04T16:54:13.925Z  Cleaning old jobs.
+2026-11-04T16:54:13.925Z  [Printer Lab Printer] Cleaning jobs, 0 completed jobs in memory...
+2026-11-04T16:54:13.925Z  [Client 1] POST /printers/lab
+2026-11-04T16:54:13.927Z  [Client 1] Continue
+2026-11-04T16:54:13.927Z  [Client 1] Request: version=2.0
+2026-11-04T16:54:13.927Z  [Client 1] Request: operation-id=Get-Printer-Attributes(000b)
+2026-11-04T16:54:13.927Z  [Client 1] Request: request-id=7
+2026-11-04T16:54:13.928Z  [Client 1] Request: operation-attributes-tag
+2026-11-04T16:54:13.928Z  [Client 1] Request: attributes-charset (charset) utf-8
+2026-11-04T16:54:13.928Z  [Client 1] Request: attributes-natural-language (naturalLanguage) en-us
+2026-11-04T16:54:13.928Z  [Client 1] Request: printer-uri (uri) ipp://172.28.77.30:631/printers/lab
+2026-11-04T16:54:13.928Z  [Client 1] Request: requested-attributes (1setOf keyword) all,media-col-database
+2026-11-04T16:54:13.928Z  [Client 1] Get-Printer-Attributes client-error-not-found (\"printer-uri\" \'ipp://172.28.77.30:631/printers/lab\' not found.)
+2026-11-04T16:54:13.928Z  [Client 1] Response: version=2.0
+2026-11-04T16:54:13.928Z  [Client 1] Response: status-code=client-error-not-found(0406)
+2026-11-04T16:54:13.928Z  [Client 1] Response: request-id=7
+2026-11-04T16:54:13.928Z  [Client 1] Response: operation-attributes-tag
+2026-11-04T16:54:13.928Z  [Client 1] Response: attributes-charset (charset) utf-8
+2026-11-04T16:54:13.928Z  [Client 1] Response: attributes-natural-language (naturalLanguage) en-us
+2026-11-04T16:54:13.928Z  [Client 1] Response: status-message (textWithoutLanguage) \\\"printer-uri\\\" \'ipp://172.28.77.30:631/printers/lab\' not found.
+2026-11-04T16:54:13.928Z  [Client 1] OK
+2026-11-04T16:54:13.928Z  [Client 1] serverRespondHTTP: Sending 156 bytes of IPP response (Content-Length=156)
+2026-11-04T16:54:13.929Z  [Client 1] serverRespondHTTP: Sent IPP response.
+2026-11-04T16:54:13.929Z  [Client 1] serverRespondHTTP: Flushing write buffer.
+2026-11-04T16:54:13.933Z  [Client 1] POST /printers/lab
+2026-11-04T16:54:13.933Z  [Client 1] Continue
+2026-11-04T16:54:13.933Z  [Client 1] Request: version=1.1
+2026-11-04T16:54:13.933Z  [Client 1] Request: operation-id=Get-Printer-Attributes(000b)
+2026-11-04T16:54:13.933Z  [Client 1] Request: request-id=8
+2026-11-04T16:54:13.933Z  [Client 1] Request: operation-attributes-tag
+2026-11-04T16:54:13.933Z  [Client 1] Request: attributes-charset (charset) utf-8
+2026-11-04T16:54:13.933Z  [Client 1] Request: attributes-natural-language (naturalLanguage) en-us
+2026-11-04T16:54:13.933Z  [Client 1] Request: printer-uri (uri) ipp://172.28.77.30:631/printers/lab
+2026-11-04T16:54:13.933Z  [Client 1] Request: requested-attributes (1setOf keyword) all,media-col-database
+2026-11-04T16:54:13.933Z  [Client 1] Get-Printer-Attributes client-error-not-found (\"printer-uri\" \'ipp://172.28.77.30:631/printers/lab\' not found.)
+2026-11-04T16:54:13.933Z  [Client 1] Response: version=1.1
+2026-11-04T16:54:13.933Z  [Client 1] Response: status-code=client-error-not-found(0406)
+2026-11-04T16:54:13.933Z  [Client 1] Response: request-id=8
+2026-11-04T16:54:13.933Z  [Client 1] Response: operation-attributes-tag
+2026-11-04T16:54:13.933Z  [Client 1] Response: attributes-charset (charset) utf-8
+2026-11-04T16:54:13.933Z  [Client 1] Response: attributes-natural-language (naturalLanguage) en-us
+2026-11-04T16:54:13.933Z  [Client 1] Response: status-message (textWithoutLanguage) \\\"printer-uri\\\" \'ipp://172.28.77.30:631/printers/lab\' not found.
+2026-11-04T16:54:13.933Z  [Client 1] OK
+2026-11-04T16:54:13.933Z  [Client 1] serverRespondHTTP: Sending 156 bytes of IPP response (Content-Length=156)
+2026-11-04T16:54:13.933Z  [Client 1] serverRespondHTTP: Sent IPP response.
+2026-11-04T16:54:13.933Z  [Client 1] serverRespondHTTP: Flushing write buffer.
+2026-11-04T16:54:13.934Z  [Client 1] POST /printers/lab
+2026-11-04T16:54:13.934Z  [Client 1] Continue
+2026-11-04T16:54:13.934Z  [Client 1] Request: version=2.0
+2026-11-04T16:54:13.934Z  [Client 1] Request: operation-id=Get-Printer-Attributes(000b)
+2026-11-04T16:54:13.934Z  [Client 1] Request: request-id=9
+2026-11-04T16:54:13.934Z  [Client 1] Request: operation-attributes-tag
+2026-11-04T16:54:13.934Z  [Client 1] Request: attributes-charset (charset) utf-8
+2026-11-04T16:54:13.934Z  [Client 1] Request: attributes-natural-language (naturalLanguage) en-us
+2026-11-04T16:54:13.934Z  [Client 1] Request: printer-uri (uri) ipp://172.28.77.30:631/printers/lab
+2026-11-04T16:54:13.934Z  [Client 1] Request: requested-attributes (keyword) all
+2026-11-04T16:54:13.934Z  [Client 1] Get-Printer-Attributes client-error-not-found (\"printer-uri\" \'ipp://172.28.77.30:631/printers/lab\' not found.)
+2026-11-04T16:54:13.934Z  [Client 1] Response: version=2.0
+2026-11-04T16:54:13.934Z  [Client 1] Response: status-code=client-error-not-found(0406)
+2026-11-04T16:54:13.934Z  [Client 1] Response: request-id=9
+2026-11-04T16:54:13.934Z  [Client 1] Response: operation-attributes-tag
+2026-11-04T16:54:13.934Z  [Client 1] Response: attributes-charset (charset) utf-8
+2026-11-04T16:54:13.934Z  [Client 1] Response: attributes-natural-language (naturalLanguage) en-us
+2026-11-04T16:54:13.934Z  [Client 1] Response: status-message (textWithoutLanguage) \\\"printer-uri\\\" \'ipp://172.28.77.30:631/printers/lab\' not found.
+2026-11-04T16:54:13.934Z  [Client 1] OK
+2026-11-04T16:54:13.934Z  [Client 1] serverRespondHTTP: Sending 156 bytes of IPP response (Content-Length=156)
+2026-11-04T16:54:13.935Z  [Client 1] serverRespondHTTP: Sent IPP response.
+2026-11-04T16:54:13.935Z  [Client 1] serverRespondHTTP: Flushing write buffer.
+2026-11-04T16:54:13.935Z  [Client 1] Client closed connection.
+2026-11-04T16:54:13.935Z  [Client 1] Closing connection from "172.28.77.20".
+2026-11-04T16:54:32.321Z  serverRun: Incoming connection on listener f92c3983f98d:631.
+2026-11-04T16:54:32.324Z  [Client 2] Accepted connection from "localhost".
+2026-11-04T16:54:32.324Z  [Client 2] POST /ipp/print
+2026-11-04T16:54:32.324Z  [Client 2] Continue
+2026-11-04T16:54:32.325Z  [Client 2] Request: version=1.1
+2026-11-04T16:54:32.325Z  [Client 2] Request: operation-id=Get-Printer-Attributes(000b)
+2026-11-04T16:54:32.325Z  [Client 2] Request: request-id=111109
+2026-11-04T16:54:32.325Z  [Client 2] Request: operation-attributes-tag
+2026-11-04T16:54:32.325Z  [Client 2] Request: attributes-charset (charset) utf-8
+2026-11-04T16:54:32.325Z  [Client 2] Request: attributes-natural-language (naturalLanguage) en
+2026-11-04T16:54:32.325Z  [Client 2] Request: printer-uri (uri) ipp://127.0.0.1:631/ipp/print
+2026-11-04T16:54:32.325Z  [Client 2] Get-Printer-Attributes successful-ok
+2026-11-04T16:54:32.326Z  [Client 2] Response: version=1.1
+2026-11-04T16:54:32.326Z  [Client 2] Response: status-code=successful-ok(0000)
+2026-11-04T16:54:32.326Z  [Client 2] Response: request-id=111109
+2026-11-04T16:54:32.326Z  [Client 2] Response: operation-attributes-tag
+2026-11-04T16:54:32.326Z  [Client 2] Response: attributes-charset (charset) utf-8
+2026-11-04T16:54:32.326Z  [Client 2] Response: attributes-natural-language (naturalLanguage) en
+2026-11-04T16:54:32.326Z  [Client 2] Response: printer-attributes-tag
+2026-11-04T16:54:32.326Z  [Client 2] Response: charset-configured (charset) utf-8
+2026-11-04T16:54:32.326Z  [Client 2] Response: charset-supported (1setOf charset) us-ascii,utf-8
+2026-11-04T16:54:32.326Z  [Client 2] Response: color-supported (boolean) false
+2026-11-04T16:54:32.326Z  [Client 2] Response: compression-supported (1setOf keyword) deflate,gzip,none
+2026-11-04T16:54:32.326Z  [Client 2] Response: copies-default (integer) 1
+2026-11-04T16:54:32.326Z  [Client 2] Response: copies-supported (rangeOfInteger) 1-999
+2026-11-04T16:54:32.326Z  [Client 2] Response: document-format-default (mimeMediaType) application/pdf
+2026-11-04T16:54:32.326Z  [Client 2] Response: document-format-supported (1setOf mimeMediaType) application/pdf,image/jpeg,image/pwg-raster
+2026-11-04T16:54:32.326Z  [Client 2] Response: document-password-supported (integer) 127
+2026-11-04T16:54:32.326Z  [Client 2] Response: finishings-default (enum) none
+2026-11-04T16:54:32.326Z  [Client 2] Response: finishings-supported (enum) none
+2026-11-04T16:54:32.326Z  [Client 2] Response: generated-natural-language-supported (naturalLanguage) en
+2026-11-04T16:54:32.326Z  [Client 2] Response: identify-actions-default (keyword) sound
+2026-11-04T16:54:32.326Z  [Client 2] Response: identify-actions-supported (1setOf keyword) display,sound
+2026-11-04T16:54:32.326Z  [Client 2] Response: ipp-features-supported (1setOf keyword) document-object,ipp-everywhere,infrastructure-printer,page-overrides
+2026-11-04T16:54:32.326Z  [Client 2] Response: ipp-versions-supported (1setOf keyword) 1.0,1.1,2.0
+2026-11-04T16:54:32.326Z  [Client 2] Response: ippget-event-life (integer) 300
+2026-11-04T16:54:32.326Z  [Client 2] Response: job-account-id-default (nameWithoutLanguage)
+2026-11-04T16:54:32.326Z  [Client 2] Response: job-account-id-supported (boolean) true
+2026-11-04T16:54:32.326Z  [Client 2] Response: job-accounting-user-id-default (nameWithoutLanguage)
+2026-11-04T16:54:32.326Z  [Client 2] Response: job-accounting-user-id-supported (boolean) true
+2026-11-04T16:54:32.326Z  [Client 2] Response: job-creation-attributes-supported (1setOf keyword) copies,ipp-attribute-fidelity,job-account-id,job-accounting-user-id,job-name,job-password,job-priority,media,media-col,multiple-document-handling,orientation-requested,print-quality,sides
+2026-11-04T16:54:32.326Z  [Client 2] Response: job-ids-supported (boolean) true
+2026-11-04T16:54:32.326Z  [Client 2] Response: job-k-octets-supported (rangeOfInteger) 0-234492896
+2026-11-04T16:54:32.326Z  [Client 2] Response: job-password-encryption-supported (keyword) none
+2026-11-04T16:54:32.326Z  [Client 2] Response: job-password-supported (integer) 4
+2026-11-04T16:54:32.326Z  [Client 2] Response: job-priority-default (integer) 50
+2026-11-04T16:54:32.326Z  [Client 2] Response: job-priority-supported (integer) 100
+2026-11-04T16:54:32.326Z  [Client 2] Response: job-sheets-default (nameWithoutLanguage) none
+2026-11-04T16:54:32.326Z  [Client 2] Response: job-sheets-supported (nameWithoutLanguage) none
+2026-11-04T16:54:32.326Z  [Client 2] Response: media-bottom-margin-supported (integer) 635
+2026-11-04T16:54:32.326Z  [Client 2] Response: media-col-default (collection) {media-key=na_letter_8.5x11in media-size={x-dimension=21590 y-dimension=27940} media-size-name=na_letter_8.5x11in media-bottom-margin=635 media-left-margin=635 media-right-margin=635 media-top-margin=635}
+2026-11-04T16:54:32.326Z  [Client 2] Response: media-col-ready (collection) {media-key=na_letter_8.5x11in_main media-size={x-dimension=21590 y-dimension=27940} media-size-name=na_letter_8.5x11in media-bottom-margin=635 media-left-margin=635 media-right-margin=635 media-top-margin=635 media-source=main}
+2026-11-04T16:54:32.326Z  [Client 2] Response: media-default (keyword) na_letter_8.5x11in
+2026-11-04T16:54:32.326Z  [Client 2] Response: media-left-margin-supported (integer) 635
+2026-11-04T16:54:32.326Z  [Client 2] Response: media-ready (keyword) na_letter_8.5x11in
+2026-11-04T16:54:32.326Z  [Client 2] Response: media-right-margin-supported (integer) 635
+2026-11-04T16:54:32.326Z  [Client 2] Response: media-supported (1setOf keyword) na_letter_8.5x11in,na_legal_8.5x14in,iso_a4_210x297mm
+2026-11-04T16:54:32.326Z  [Client 2] Response: media-size-supported (1setOf collection) {x-dimension=21590 y-dimension=27940},{x-dimension=21590 y-dimension=35560},{x-dimension=21000 y-dimension=29700}
+2026-11-04T16:54:32.326Z  [Client 2] Response: media-source-supported (keyword) main
+2026-11-04T16:54:32.326Z  [Client 2] Response: media-top-margin-supported (integer) 635
+2026-11-04T16:54:32.326Z  [Client 2] Response: media-type-supported (keyword) auto
+2026-11-04T16:54:32.326Z  [Client 2] Response: media-col-supported (1setOf keyword) media-bottom-margin,media-left-margin,media-right-margin,media-size,media-size-name,media-source,media-top-margin,media-type
+2026-11-04T16:54:32.326Z  [Client 2] Response: multiple-document-handling-supported (1setOf keyword) separate-documents-uncollated-copies,separate-documents-collated-copies
+2026-11-04T16:54:32.326Z  [Client 2] Response: multiple-document-jobs-supported (boolean) false
+2026-11-04T16:54:32.326Z  [Client 2] Response: multiple-operation-time-out (integer) 60
+2026-11-04T16:54:32.326Z  [Client 2] Response: multiple-operation-time-out-action (keyword) abort-job
+2026-11-04T16:54:32.326Z  [Client 2] Response: natural-language-configured (naturalLanguage) en
+2026-11-04T16:54:32.326Z  [Client 2] Response: notify-attributes-supported (1setOf keyword) printer-state-change-time,notify-lease-expiration-time,notify-subscriber-user-name
+2026-11-04T16:54:32.326Z  [Client 2] Response: notify-events-default (keyword) job-completed
+2026-11-04T16:54:32.326Z  [Client 2] Response: notify-events-supported (1setOf keyword) document-completed,document-config-changed,document-created,document-fetchable,document-state-changed,document-stopped,job-completed,job-config-changed,job-created,job-fetchable,job-progress,job-state-changed,job-stopped,printer-config-changed,printer-finishings-changed,printer-media-changed,printer-queue-order-changed,printer-restarted,printer-shutdown,printer-state-changed,printer-stopped
+2026-11-04T16:54:32.326Z  [Client 2] Response: notify-lease-duration-default (integer) 86400
+2026-11-04T16:54:32.326Z  [Client 2] Response: notify-lease-duration-supported (rangeOfInteger) 0-67108863
+2026-11-04T16:54:32.326Z  [Client 2] Response: notify-max-events-supported (integer) 21
+2026-11-04T16:54:32.326Z  [Client 2] Response: notify-pull-method-supported (keyword) ippget
+2026-11-04T16:54:32.326Z  [Client 2] Response: number-up-default (integer) 1
+2026-11-04T16:54:32.326Z  [Client 2] Response: number-up-supported (integer) 1
+2026-11-04T16:54:32.326Z  [Client 2] Response: operations-supported (1setOf enum) Print-Job,Print-URI,Validate-Job,Create-Job,Send-Document,Send-URI,Cancel-Job,Get-Job-Attributes,Get-Jobs,Get-Printer-Attributes,Get-Printer-Supported-Values,Create-Printer-Subscriptions,Create-Job-Subscriptions,Get-Subscription-Attributes,Get-Subscriptions,Renew-Subscription,Cancel-Subscription,Get-Notifications,Get-Document-Attributes,Get-Documents,Cancel-My-Jobs,Close-Job,Identify-Printer,Validate-Document,Acknowledge-Document,Acknowledge-Identify-Printer,Acknowledge-Job,Fetch-Document,Fetch-Job,Get-Output-Device-Attributes,Update-Active-Jobs,Update-Document-Status,Update-Job-Status,Update-Output-Device-Attributes,Deregister-Output-Device
+2026-11-04T16:54:32.326Z  [Client 2] Response: orientation-requested-default (no-value) no-value
+2026-11-04T16:54:32.326Z  [Client 2] Response: orientation-requested-supported (1setOf enum) portrait,landscape,reverse-landscape,reverse-portrait
+2026-11-04T16:54:32.326Z  [Client 2] Response: output-bin-default (keyword) face-down
+2026-11-04T16:54:32.326Z  [Client 2] Response: output-bin-supported (keyword) face-down
+2026-11-04T16:54:32.326Z  [Client 2] Response: overrides-supported (1setOf keyword) document-number,pages
+2026-11-04T16:54:32.326Z  [Client 2] Response: page-ranges-supported (boolean) true
+2026-11-04T16:54:32.326Z  [Client 2] Response: pages-per-minute (integer) 0
+2026-11-04T16:54:32.326Z  [Client 2] Response: pdl-override-supported (keyword) attempted
+2026-11-04T16:54:32.326Z  [Client 2] Response: preferred-attributes-supported (boolean) false
+2026-11-04T16:54:32.326Z  [Client 2] Response: print-color-mode-default (keyword) auto
+2026-11-04T16:54:32.326Z  [Client 2] Response: print-color-mode-supported (1setOf keyword) auto,color,monochrome
+2026-11-04T16:54:32.326Z  [Client 2] Response: print-content-optimize-default (keyword) auto
+2026-11-04T16:54:32.326Z  [Client 2] Response: print-content-optimize-supported (keyword) auto
+2026-11-04T16:54:32.326Z  [Client 2] Response: print-rendering-intent-default (keyword) auto
+2026-11-04T16:54:32.326Z  [Client 2] Response: print-rendering-intent-supported (keyword) auto
+2026-11-04T16:54:32.326Z  [Client 2] Response: print-quality-default (enum) normal
+2026-11-04T16:54:32.326Z  [Client 2] Response: print-quality-supported (1setOf enum) draft,normal,high
+2026-11-04T16:54:32.326Z  [Client 2] Response: printer-device-id (textWithoutLanguage) MFG:Test;MDL:Printer;CMD:PDF,JPEG,image/pwg-raster;
+2026-11-04T16:54:32.326Z  [Client 2] Response: printer-get-attributes-supported (keyword) document-format
+2026-11-04T16:54:32.326Z  [Client 2] Response: printer-geo-location (unknown) unknown
+2026-11-04T16:54:32.326Z  [Client 2] Response: printer-icons (uri) https://f92c3983f98d:631/ipp/print/icon.png
+2026-11-04T16:54:32.326Z  [Client 2] Response: printer-info (textWithoutLanguage) Lab Printer
+2026-11-04T16:54:32.326Z  [Client 2] Response: printer-is-accepting-jobs (boolean) true
+2026-11-04T16:54:32.326Z  [Client 2] Response: printer-input-tray (octetString) type=sheetFeedAutoRemovableTray;mediafeed=0;mediaxfeed=0;maxcapacity=250;level=100;status=0;name=main;
+2026-11-04T16:54:32.326Z  [Client 2] Response: printer-location (textWithoutLanguage)
+2026-11-04T16:54:32.327Z  [Client 2] Response: printer-make-and-model (textWithoutLanguage) Test Printer
+2026-11-04T16:54:32.327Z  [Client 2] Response: printer-more-info (uri) https://f92c3983f98d:631/ipp/print
+2026-11-04T16:54:32.327Z  [Client 2] Response: printer-name (nameWithoutLanguage) Lab Printer
+2026-11-04T16:54:32.327Z  [Client 2] Response: printer-organization (textWithoutLanguage) Apple Inc.
+2026-11-04T16:54:32.327Z  [Client 2] Response: printer-organizational-unit (textWithoutLanguage) Printing Engineering
+2026-11-04T16:54:32.327Z  [Client 2] Response: printer-resolution-default (resolution) 600dpi
+2026-11-04T16:54:32.327Z  [Client 2] Response: printer-resolution-supported (resolution) 600dpi
+2026-11-04T16:54:32.327Z  [Client 2] Response: printer-supply (1setOf octetString) index=1;class=receptacleThatIsFilled;type=wasteToner;unit=percent;maxcapacity=100;level=67;colorantname=unknown;,index=2;class=supplyThatIsConsumed;type=toner;unit=percent;maxcapacity=100;level=100;colorantname=black;
+2026-11-04T16:54:32.327Z  [Client 2] Response: printer-supply-description (1setOf textWithoutLanguage) Toner Waste,Black Toner
+2026-11-04T16:54:32.327Z  [Client 2] Response: printer-supply-info-uri (uri) https://f92c3983f98d:631/ipp/print/supplies
+2026-11-04T16:54:32.327Z  [Client 2] Response: printer-uri-supported (uri) ipp://f92c3983f98d:631/ipp/print
+2026-11-04T16:54:32.327Z  [Client 2] Response: printer-uuid (uri) urn:uuid:86592842-7344-310f-7d78-f4b898f1fba1
+2026-11-04T16:54:32.327Z  [Client 2] Response: printer-xri-supported (collection) {xri-authentication=none xri-security=tls xri-uri=ipp://f92c3983f98d:631/ipp/print}
+2026-11-04T16:54:32.327Z  [Client 2] Response: pwg-raster-document-resolution-supported (1setOf resolution) 150dpi,300dpi
+2026-11-04T16:54:32.327Z  [Client 2] Response: pwg-raster-document-sheet-back (keyword) normal
+2026-11-04T16:54:32.327Z  [Client 2] Response: pwg-raster-document-type-supported (1setOf keyword) black_1,cmyk_8,sgray_8,srgb_8,srgb_16
+2026-11-04T16:54:32.327Z  [Client 2] Response: reference-uri-schemes-supported (1setOf uriScheme) file,ftp,http,https
+2026-11-04T16:54:32.327Z  [Client 2] Response: sides-default (keyword) one-sided
+2026-11-04T16:54:32.327Z  [Client 2] Response: sides-supported (keyword) one-sided
+2026-11-04T16:54:32.327Z  [Client 2] Response: uri-authentication-supported (keyword)
+2026-11-04T16:54:32.327Z  [Client 2] Response: uri-security-supported (keyword)
+2026-11-04T16:54:32.327Z  [Client 2] Response: which-jobs-supported (1setOf keyword) completed,not-completed,aborted,all,canceled,pending,pending-held,processing,processing-stopped
+2026-11-04T16:54:32.327Z  [Client 2] Response: printer-config-change-date-time (dateTime) 2026-11-04T16:52:21Z
+2026-11-04T16:54:32.327Z  [Client 2] Response: printer-config-change-time (integer) 0
+2026-11-04T16:54:32.327Z  [Client 2] Response: printer-current-time (dateTime) 2026-11-04T16:54:32Z
+2026-11-04T16:54:32.327Z  [Client 2] Response: printer-state (enum) idle
+2026-11-04T16:54:32.327Z  [Client 2] Response: printer-state-change-date-time (dateTime) 2026-11-04T16:52:21Z
+2026-11-04T16:54:32.327Z  [Client 2] Response: printer-state-change-time (integer) 0
+2026-11-04T16:54:32.327Z  [Client 2] Response: printer-state-message (textWithoutLanguage) Idle.
+2026-11-04T16:54:32.327Z  [Client 2] Response: printer-state-reasons (keyword) none
+2026-11-04T16:54:32.327Z  [Client 2] Response: printer-up-time (integer) 131
+2026-11-04T16:54:32.327Z  [Client 2] Response: queued-job-count (integer) 0
+2026-11-04T16:54:32.327Z  [Client 2] OK
+2026-11-04T16:54:32.327Z  [Client 2] serverRespondHTTP: Sending 7166 bytes of IPP response (Content-Length=7166)
+2026-11-04T16:54:32.327Z  [Client 2] serverRespondHTTP: Sent IPP response.
+2026-11-04T16:54:32.327Z  [Client 2] serverRespondHTTP: Flushing write buffer.
+2026-11-04T16:54:32.340Z  [Client 2] Client closed connection.
+2026-11-04T16:54:32.340Z  [Client 2] Closing connection from "localhost".
+2026-11-04T16:59:13.544Z  serverRun: Incoming connection on listener f92c3983f98d:631.
+2026-11-04T16:59:13.548Z  [Client 3] Accepted connection from "172.28.77.20".
+2026-11-04T16:59:13.550Z  Cleaning old jobs.
+2026-11-04T16:59:13.550Z  [Printer Lab Printer] Cleaning jobs, 0 completed jobs in memory...
+2026-11-04T16:59:13.556Z  [Client 3] POST /printers/lab
+2026-11-04T16:59:13.562Z  [Client 3] Continue
+2026-11-04T16:59:13.572Z  [Client 3] Request: version=2.0
+2026-11-04T16:59:13.572Z  [Client 3] Request: operation-id=Get-Printer-Attributes(000b)
+2026-11-04T16:59:13.572Z  [Client 3] Request: request-id=7
+2026-11-04T16:59:13.572Z  [Client 3] Request: operation-attributes-tag
+2026-11-04T16:59:13.572Z  [Client 3] Request: attributes-charset (charset) utf-8
+2026-11-04T16:59:13.572Z  [Client 3] Request: attributes-natural-language (naturalLanguage) en-us
+2026-11-04T16:59:13.572Z  [Client 3] Request: printer-uri (uri) ipp://172.28.77.30:631/printers/lab
+2026-11-04T16:59:13.572Z  [Client 3] Request: requested-attributes (1setOf keyword) all,media-col-database
+2026-11-04T16:59:13.572Z  [Client 3] Get-Printer-Attributes client-error-not-found (\"printer-uri\" \'ipp://172.28.77.30:631/printers/lab\' not found.)
+2026-11-04T16:59:13.572Z  [Client 3] Response: version=2.0
+2026-11-04T16:59:13.572Z  [Client 3] Response: status-code=client-error-not-found(0406)
+2026-11-04T16:59:13.572Z  [Client 3] Response: request-id=7
+2026-11-04T16:59:13.572Z  [Client 3] Response: operation-attributes-tag
+2026-11-04T16:59:13.572Z  [Client 3] Response: attributes-charset (charset) utf-8
+2026-11-04T16:59:13.572Z  [Client 3] Response: attributes-natural-language (naturalLanguage) en-us
+2026-11-04T16:59:13.572Z  [Client 3] Response: status-message (textWithoutLanguage) \\\"printer-uri\\\" \'ipp://172.28.77.30:631/printers/lab\' not found.
+2026-11-04T16:59:13.572Z  [Client 3] OK
+2026-11-04T16:59:13.577Z  [Client 3] serverRespondHTTP: Sending 156 bytes of IPP response (Content-Length=156)
+2026-11-04T16:59:13.577Z  [Client 3] serverRespondHTTP: Sent IPP response.
+2026-11-04T16:59:13.577Z  [Client 3] serverRespondHTTP: Flushing write buffer.
+2026-11-04T16:59:13.616Z  [Client 3] POST /printers/lab
+2026-11-04T16:59:13.616Z  [Client 3] Continue
+2026-11-04T16:59:13.617Z  [Client 3] Request: version=1.1
+2026-11-04T16:59:13.617Z  [Client 3] Request: operation-id=Get-Printer-Attributes(000b)
+2026-11-04T16:59:13.617Z  [Client 3] Request: request-id=8
+2026-11-04T16:59:13.617Z  [Client 3] Request: operation-attributes-tag
+2026-11-04T16:59:13.617Z  [Client 3] Request: attributes-charset (charset) utf-8
+2026-11-04T16:59:13.617Z  [Client 3] Request: attributes-natural-language (naturalLanguage) en-us
+2026-11-04T16:59:13.617Z  [Client 3] Request: printer-uri (uri) ipp://172.28.77.30:631/printers/lab
+2026-11-04T16:59:13.617Z  [Client 3] Request: requested-attributes (1setOf keyword) all,media-col-database
+2026-11-04T16:59:13.617Z  [Client 3] Get-Printer-Attributes client-error-not-found (\"printer-uri\" \'ipp://172.28.77.30:631/printers/lab\' not found.)
+2026-11-04T16:59:13.617Z  [Client 3] Response: version=1.1
+2026-11-04T16:59:13.617Z  [Client 3] Response: status-code=client-error-not-found(0406)
+2026-11-04T16:59:13.617Z  [Client 3] Response: request-id=8
+2026-11-04T16:59:13.617Z  [Client 3] Response: operation-attributes-tag
+2026-11-04T16:59:13.617Z  [Client 3] Response: attributes-charset (charset) utf-8
+2026-11-04T16:59:13.617Z  [Client 3] Response: attributes-natural-language (naturalLanguage) en-us
+2026-11-04T16:59:13.617Z  [Client 3] Response: status-message (textWithoutLanguage) \\\"printer-uri\\\" \'ipp://172.28.77.30:631/printers/lab\' not found.
+2026-11-04T16:59:13.617Z  [Client 3] OK
+2026-11-04T16:59:13.617Z  [Client 3] serverRespondHTTP: Sending 156 bytes of IPP response (Content-Length=156)
+2026-11-04T16:59:13.617Z  [Client 3] serverRespondHTTP: Sent IPP response.
+2026-11-04T16:59:13.617Z  [Client 3] serverRespondHTTP: Flushing write buffer.
+2026-11-04T16:59:13.618Z  [Client 3] POST /printers/lab
+2026-11-04T16:59:13.618Z  [Client 3] Continue
+2026-11-04T16:59:13.618Z  [Client 3] Request: version=2.0
+2026-11-04T16:59:13.618Z  [Client 3] Request: operation-id=Get-Printer-Attributes(000b)
+2026-11-04T16:59:13.618Z  [Client 3] Request: request-id=9
+2026-11-04T16:59:13.618Z  [Client 3] Request: operation-attributes-tag
+2026-11-04T16:59:13.618Z  [Client 3] Request: attributes-charset (charset) utf-8
+2026-11-04T16:59:13.618Z  [Client 3] Request: attributes-natural-language (naturalLanguage) en-us
+2026-11-04T16:59:13.618Z  [Client 3] Request: printer-uri (uri) ipp://172.28.77.30:631/printers/lab
+2026-11-04T16:59:13.618Z  [Client 3] Request: requested-attributes (keyword) all
+2026-11-04T16:59:13.618Z  [Client 3] Get-Printer-Attributes client-error-not-found (\"printer-uri\" \'ipp://172.28.77.30:631/printers/lab\' not found.)
+2026-11-04T16:59:13.618Z  [Client 3] Response: version=2.0
+2026-11-04T16:59:13.618Z  [Client 3] Response: status-code=client-error-not-found(0406)
+2026-11-04T16:59:13.618Z  [Client 3] Response: request-id=9
+2026-11-04T16:59:13.618Z  [Client 3] Response: operation-attributes-tag
+2026-11-04T16:59:13.618Z  [Client 3] Response: attributes-charset (charset) utf-8
+2026-11-04T16:59:13.618Z  [Client 3] Response: attributes-natural-language (naturalLanguage) en-us
+2026-11-04T16:59:13.618Z  [Client 3] Response: status-message (textWithoutLanguage) \\\"printer-uri\\\" \'ipp://172.28.77.30:631/printers/lab\' not found.
+2026-11-04T16:59:13.618Z  [Client 3] OK
+2026-11-04T16:59:13.618Z  [Client 3] serverRespondHTTP: Sending 156 bytes of IPP response (Content-Length=156)
+2026-11-04T16:59:13.618Z  [Client 3] serverRespondHTTP: Sent IPP response.
+2026-11-04T16:59:13.618Z  [Client 3] serverRespondHTTP: Flushing write buffer.
+2026-11-04T16:59:13.624Z  [Client 3] Client closed connection.
+2026-11-04T16:59:13.625Z  [Client 3] Closing connection from "172.28.77.20".
+2026-11-04T17:01:02.129Z  serverRun: Incoming connection on listener f92c3983f98d:631.
+2026-11-04T17:01:02.133Z  [Client 4] Accepted connection from "172.28.77.20".
+2026-11-04T17:01:02.133Z  Cleaning old jobs.
+2026-11-04T17:01:02.133Z  [Printer Lab Printer] Cleaning jobs, 0 completed jobs in memory...
+2026-11-04T17:01:02.134Z  [Client 4] POST /printers/lab
+2026-11-04T17:01:02.134Z  [Client 4] Continue
+2026-11-04T17:01:02.135Z  [Client 4] Request: version=2.0
+2026-11-04T17:01:02.135Z  [Client 4] Request: operation-id=Get-Printer-Attributes(000b)
+2026-11-04T17:01:02.135Z  [Client 4] Request: request-id=7
+2026-11-04T17:01:02.135Z  [Client 4] Request: operation-attributes-tag
+2026-11-04T17:01:02.135Z  [Client 4] Request: attributes-charset (charset) utf-8
+2026-11-04T17:01:02.135Z  [Client 4] Request: attributes-natural-language (naturalLanguage) en-us
+2026-11-04T17:01:02.135Z  [Client 4] Request: printer-uri (uri) ipp://172.28.77.30:631/printers/lab
+2026-11-04T17:01:02.135Z  [Client 4] Request: requested-attributes (1setOf keyword) all,media-col-database
+2026-11-04T17:01:02.137Z  [Client 4] Get-Printer-Attributes client-error-not-found (\"printer-uri\" \'ipp://172.28.77.30:631/printers/lab\' not found.)
+2026-11-04T17:01:02.137Z  [Client 4] Response: version=2.0
+2026-11-04T17:01:02.137Z  [Client 4] Response: status-code=client-error-not-found(0406)
+2026-11-04T17:01:02.137Z  [Client 4] Response: request-id=7
+2026-11-04T17:01:02.137Z  [Client 4] Response: operation-attributes-tag
+2026-11-04T17:01:02.137Z  [Client 4] Response: attributes-charset (charset) utf-8
+2026-11-04T17:01:02.137Z  [Client 4] Response: attributes-natural-language (naturalLanguage) en-us
+2026-11-04T17:01:02.137Z  [Client 4] Response: status-message (textWithoutLanguage) \\\"printer-uri\\\" \'ipp://172.28.77.30:631/printers/lab\' not found.
+2026-11-04T17:01:02.137Z  [Client 4] OK
+2026-11-04T17:01:02.137Z  [Client 4] serverRespondHTTP: Sending 156 bytes of IPP response (Content-Length=156)
+2026-11-04T17:01:02.138Z  [Client 4] serverRespondHTTP: Sent IPP response.
+2026-11-04T17:01:02.138Z  [Client 4] serverRespondHTTP: Flushing write buffer.
+2026-11-04T17:01:02.148Z  [Client 4] POST /printers/lab
+2026-11-04T17:01:02.148Z  [Client 4] Continue
+2026-11-04T17:01:02.148Z  [Client 4] Request: version=1.1
+2026-11-04T17:01:02.148Z  [Client 4] Request: operation-id=Get-Printer-Attributes(000b)
+2026-11-04T17:01:02.148Z  [Client 4] Request: request-id=8
+2026-11-04T17:01:02.148Z  [Client 4] Request: operation-attributes-tag
+2026-11-04T17:01:02.148Z  [Client 4] Request: attributes-charset (charset) utf-8
+2026-11-04T17:01:02.148Z  [Client 4] Request: attributes-natural-language (naturalLanguage) en-us
+2026-11-04T17:01:02.148Z  [Client 4] Request: printer-uri (uri) ipp://172.28.77.30:631/printers/lab
+2026-11-04T17:01:02.148Z  [Client 4] Request: requested-attributes (1setOf keyword) all,media-col-database
+2026-11-04T17:01:02.148Z  [Client 4] Get-Printer-Attributes client-error-not-found (\"printer-uri\" \'ipp://172.28.77.30:631/printers/lab\' not found.)
+2026-11-04T17:01:02.148Z  [Client 4] Response: version=1.1
+2026-11-04T17:01:02.148Z  [Client 4] Response: status-code=client-error-not-found(0406)
+2026-11-04T17:01:02.148Z  [Client 4] Response: request-id=8
+2026-11-04T17:01:02.148Z  [Client 4] Response: operation-attributes-tag
+2026-11-04T17:01:02.148Z  [Client 4] Response: attributes-charset (charset) utf-8
+2026-11-04T17:01:02.148Z  [Client 4] Response: attributes-natural-language (naturalLanguage) en-us
+2026-11-04T17:01:02.148Z  [Client 4] Response: status-message (textWithoutLanguage) \\\"printer-uri\\\" \'ipp://172.28.77.30:631/printers/lab\' not found.
+2026-11-04T17:01:02.148Z  [Client 4] OK
+2026-11-04T17:01:02.148Z  [Client 4] serverRespondHTTP: Sending 156 bytes of IPP response (Content-Length=156)
+2026-11-04T17:01:02.148Z  [Client 4] serverRespondHTTP: Sent IPP response.
+2026-11-04T17:01:02.148Z  [Client 4] serverRespondHTTP: Flushing write buffer.
+2026-11-04T17:01:02.148Z  [Client 4] POST /printers/lab
+2026-11-04T17:01:02.149Z  [Client 4] Continue
+2026-11-04T17:01:02.149Z  [Client 4] Request: version=2.0
+2026-11-04T17:01:02.149Z  [Client 4] Request: operation-id=Get-Printer-Attributes(000b)
+2026-11-04T17:01:02.149Z  [Client 4] Request: request-id=9
+2026-11-04T17:01:02.149Z  [Client 4] Request: operation-attributes-tag
+2026-11-04T17:01:02.149Z  [Client 4] Request: attributes-charset (charset) utf-8
+2026-11-04T17:01:02.149Z  [Client 4] Request: attributes-natural-language (naturalLanguage) en-us
+2026-11-04T17:01:02.149Z  [Client 4] Request: printer-uri (uri) ipp://172.28.77.30:631/printers/lab
+2026-11-04T17:01:02.149Z  [Client 4] Request: requested-attributes (keyword) all
+2026-11-04T17:01:02.149Z  [Client 4] Get-Printer-Attributes client-error-not-found (\"printer-uri\" \'ipp://172.28.77.30:631/printers/lab\' not found.)
+2026-11-04T17:01:02.149Z  [Client 4] Response: version=2.0
+2026-11-04T17:01:02.149Z  [Client 4] Response: status-code=client-error-not-found(0406)
+2026-11-04T17:01:02.149Z  [Client 4] Response: request-id=9
+2026-11-04T17:01:02.149Z  [Client 4] Response: operation-attributes-tag
+2026-11-04T17:01:02.149Z  [Client 4] Response: attributes-charset (charset) utf-8
+2026-11-04T17:01:02.149Z  [Client 4] Response: attributes-natural-language (naturalLanguage) en-us
+2026-11-04T17:01:02.149Z  [Client 4] Response: status-message (textWithoutLanguage) \\\"printer-uri\\\" \'ipp://172.28.77.30:631/printers/lab\' not found.
+2026-11-04T17:01:02.149Z  [Client 4] OK
+2026-11-04T17:01:02.149Z  [Client 4] serverRespondHTTP: Sending 156 bytes of IPP response (Content-Length=156)
+2026-11-04T17:01:02.149Z  [Client 4] serverRespondHTTP: Sent IPP response.
+2026-11-04T17:01:02.149Z  [Client 4] serverRespondHTTP: Flushing write buffer.
+2026-11-04T17:01:02.150Z  [Client 4] Client closed connection.
+2026-11-04T17:01:02.150Z  [Client 4] Closing connection from "172.28.77.20".
+2026-11-04T17:01:42.778Z  serverRun: Incoming connection on listener f92c3983f98d:631.
+2026-11-04T17:01:42.779Z  [Client 5] Accepted connection from "localhost".
+2026-11-04T17:01:42.779Z  Cleaning old jobs.
+2026-11-04T17:01:42.779Z  [Printer Lab Printer] Cleaning jobs, 0 completed jobs in memory...
+2026-11-04T17:01:42.782Z  [Client 5] POST /ipp/print
+2026-11-04T17:01:42.782Z  [Client 5] Continue
+2026-11-04T17:01:42.783Z  [Client 5] Request: version=1.1
+2026-11-04T17:01:42.783Z  [Client 5] Request: operation-id=Get-Printer-Attributes(000b)
+2026-11-04T17:01:42.783Z  [Client 5] Request: request-id=102752
+2026-11-04T17:01:42.783Z  [Client 5] Request: operation-attributes-tag
+2026-11-04T17:01:42.783Z  [Client 5] Request: attributes-charset (charset) utf-8
+2026-11-04T17:01:42.783Z  [Client 5] Request: attributes-natural-language (naturalLanguage) en
+2026-11-04T17:01:42.783Z  [Client 5] Request: printer-uri (uri) ipp://127.0.0.1:631/ipp/print
+2026-11-04T17:01:42.783Z  [Client 5] Get-Printer-Attributes successful-ok
+2026-11-04T17:01:42.783Z  [Client 5] Response: version=1.1
+2026-11-04T17:01:42.783Z  [Client 5] Response: status-code=successful-ok(0000)
+2026-11-04T17:01:42.783Z  [Client 5] Response: request-id=102752
+2026-11-04T17:01:42.783Z  [Client 5] Response: operation-attributes-tag
+2026-11-04T17:01:42.783Z  [Client 5] Response: attributes-charset (charset) utf-8
+2026-11-04T17:01:42.783Z  [Client 5] Response: attributes-natural-language (naturalLanguage) en
+2026-11-04T17:01:42.783Z  [Client 5] Response: printer-attributes-tag
+2026-11-04T17:01:42.783Z  [Client 5] Response: charset-configured (charset) utf-8
+2026-11-04T17:01:42.783Z  [Client 5] Response: charset-supported (1setOf charset) us-ascii,utf-8
+2026-11-04T17:01:42.783Z  [Client 5] Response: color-supported (boolean) false
+2026-11-04T17:01:42.783Z  [Client 5] Response: compression-supported (1setOf keyword) deflate,gzip,none
+2026-11-04T17:01:42.783Z  [Client 5] Response: copies-default (integer) 1
+2026-11-04T17:01:42.783Z  [Client 5] Response: copies-supported (rangeOfInteger) 1-999
+2026-11-04T17:01:42.783Z  [Client 5] Response: document-format-default (mimeMediaType) application/pdf
+2026-11-04T17:01:42.783Z  [Client 5] Response: document-format-supported (1setOf mimeMediaType) application/pdf,image/jpeg,image/pwg-raster
+2026-11-04T17:01:42.783Z  [Client 5] Response: document-password-supported (integer) 127
+2026-11-04T17:01:42.783Z  [Client 5] Response: finishings-default (enum) none
+2026-11-04T17:01:42.783Z  [Client 5] Response: finishings-supported (enum) none
+2026-11-04T17:01:42.783Z  [Client 5] Response: generated-natural-language-supported (naturalLanguage) en
+2026-11-04T17:01:42.783Z  [Client 5] Response: identify-actions-default (keyword) sound
+2026-11-04T17:01:42.783Z  [Client 5] Response: identify-actions-supported (1setOf keyword) display,sound
+2026-11-04T17:01:42.783Z  [Client 5] Response: ipp-features-supported (1setOf keyword) document-object,ipp-everywhere,infrastructure-printer,page-overrides
+2026-11-04T17:01:42.783Z  [Client 5] Response: ipp-versions-supported (1setOf keyword) 1.0,1.1,2.0
+2026-11-04T17:01:42.783Z  [Client 5] Response: ippget-event-life (integer) 300
+2026-11-04T17:01:42.783Z  [Client 5] Response: job-account-id-default (nameWithoutLanguage)
+2026-11-04T17:01:42.783Z  [Client 5] Response: job-account-id-supported (boolean) true
+2026-11-04T17:01:42.783Z  [Client 5] Response: job-accounting-user-id-default (nameWithoutLanguage)
+2026-11-04T17:01:42.783Z  [Client 5] Response: job-accounting-user-id-supported (boolean) true
+2026-11-04T17:01:42.783Z  [Client 5] Response: job-creation-attributes-supported (1setOf keyword) copies,ipp-attribute-fidelity,job-account-id,job-accounting-user-id,job-name,job-password,job-priority,media,media-col,multiple-document-handling,orientation-requested,print-quality,sides
+2026-11-04T17:01:42.783Z  [Client 5] Response: job-ids-supported (boolean) true
+2026-11-04T17:01:42.783Z  [Client 5] Response: job-k-octets-supported (rangeOfInteger) 0-234492896
+2026-11-04T17:01:42.783Z  [Client 5] Response: job-password-encryption-supported (keyword) none
+2026-11-04T17:01:42.783Z  [Client 5] Response: job-password-supported (integer) 4
+2026-11-04T17:01:42.783Z  [Client 5] Response: job-priority-default (integer) 50
+2026-11-04T17:01:42.783Z  [Client 5] Response: job-priority-supported (integer) 100
+2026-11-04T17:01:42.783Z  [Client 5] Response: job-sheets-default (nameWithoutLanguage) none
+2026-11-04T17:01:42.783Z  [Client 5] Response: job-sheets-supported (nameWithoutLanguage) none
+2026-11-04T17:01:42.783Z  [Client 5] Response: media-bottom-margin-supported (integer) 635
+2026-11-04T17:01:42.783Z  [Client 5] Response: media-col-default (collection) {media-key=na_letter_8.5x11in media-size={x-dimension=21590 y-dimension=27940} media-size-name=na_letter_8.5x11in media-bottom-margin=635 media-left-margin=635 media-right-margin=635 media-top-margin=635}
+2026-11-04T17:01:42.783Z  [Client 5] Response: media-col-ready (collection) {media-key=na_letter_8.5x11in_main media-size={x-dimension=21590 y-dimension=27940} media-size-name=na_letter_8.5x11in media-bottom-margin=635 media-left-margin=635 media-right-margin=635 media-top-margin=635 media-source=main}
+2026-11-04T17:01:42.783Z  [Client 5] Response: media-default (keyword) na_letter_8.5x11in
+2026-11-04T17:01:42.783Z  [Client 5] Response: media-left-margin-supported (integer) 635
+2026-11-04T17:01:42.783Z  [Client 5] Response: media-ready (keyword) na_letter_8.5x11in
+2026-11-04T17:01:42.783Z  [Client 5] Response: media-right-margin-supported (integer) 635
+2026-11-04T17:01:42.783Z  [Client 5] Response: media-supported (1setOf keyword) na_letter_8.5x11in,na_legal_8.5x14in,iso_a4_210x297mm
+2026-11-04T17:01:42.783Z  [Client 5] Response: media-size-supported (1setOf collection) {x-dimension=21590 y-dimension=27940},{x-dimension=21590 y-dimension=35560},{x-dimension=21000 y-dimension=29700}
+2026-11-04T17:01:42.783Z  [Client 5] Response: media-source-supported (keyword) main
+2026-11-04T17:01:42.783Z  [Client 5] Response: media-top-margin-supported (integer) 635
+2026-11-04T17:01:42.783Z  [Client 5] Response: media-type-supported (keyword) auto
+2026-11-04T17:01:42.783Z  [Client 5] Response: media-col-supported (1setOf keyword) media-bottom-margin,media-left-margin,media-right-margin,media-size,media-size-name,media-source,media-top-margin,media-type
+2026-11-04T17:01:42.783Z  [Client 5] Response: multiple-document-handling-supported (1setOf keyword) separate-documents-uncollated-copies,separate-documents-collated-copies
+2026-11-04T17:01:42.783Z  [Client 5] Response: multiple-document-jobs-supported (boolean) false
+2026-11-04T17:01:42.783Z  [Client 5] Response: multiple-operation-time-out (integer) 60
+2026-11-04T17:01:42.783Z  [Client 5] Response: multiple-operation-time-out-action (keyword) abort-job
+2026-11-04T17:01:42.783Z  [Client 5] Response: natural-language-configured (naturalLanguage) en
+2026-11-04T17:01:42.783Z  [Client 5] Response: notify-attributes-supported (1setOf keyword) printer-state-change-time,notify-lease-expiration-time,notify-subscriber-user-name
+2026-11-04T17:01:42.783Z  [Client 5] Response: notify-events-default (keyword) job-completed
+2026-11-04T17:01:42.783Z  [Client 5] Response: notify-events-supported (1setOf keyword) document-completed,document-config-changed,document-created,document-fetchable,document-state-changed,document-stopped,job-completed,job-config-changed,job-created,job-fetchable,job-progress,job-state-changed,job-stopped,printer-config-changed,printer-finishings-changed,printer-media-changed,printer-queue-order-changed,printer-restarted,printer-shutdown,printer-state-changed,printer-stopped
+2026-11-04T17:01:42.783Z  [Client 5] Response: notify-lease-duration-default (integer) 86400
+2026-11-04T17:01:42.783Z  [Client 5] Response: notify-lease-duration-supported (rangeOfInteger) 0-67108863
+2026-11-04T17:01:42.783Z  [Client 5] Response: notify-max-events-supported (integer) 21
+2026-11-04T17:01:42.783Z  [Client 5] Response: notify-pull-method-supported (keyword) ippget
+2026-11-04T17:01:42.783Z  [Client 5] Response: number-up-default (integer) 1
+2026-11-04T17:01:42.783Z  [Client 5] Response: number-up-supported (integer) 1
+2026-11-04T17:01:42.783Z  [Client 5] Response: operations-supported (1setOf enum) Print-Job,Print-URI,Validate-Job,Create-Job,Send-Document,Send-URI,Cancel-Job,Get-Job-Attributes,Get-Jobs,Get-Printer-Attributes,Get-Printer-Supported-Values,Create-Printer-Subscriptions,Create-Job-Subscriptions,Get-Subscription-Attributes,Get-Subscriptions,Renew-Subscription,Cancel-Subscription,Get-Notifications,Get-Document-Attributes,Get-Documents,Cancel-My-Jobs,Close-Job,Identify-Printer,Validate-Document,Acknowledge-Document,Acknowledge-Identify-Printer,Acknowledge-Job,Fetch-Document,Fetch-Job,Get-Output-Device-Attributes,Update-Active-Jobs,Update-Document-Status,Update-Job-Status,Update-Output-Device-Attributes,Deregister-Output-Device
+2026-11-04T17:01:42.783Z  [Client 5] Response: orientation-requested-default (no-value) no-value
+2026-11-04T17:01:42.783Z  [Client 5] Response: orientation-requested-supported (1setOf enum) portrait,landscape,reverse-landscape,reverse-portrait
+2026-11-04T17:01:42.783Z  [Client 5] Response: output-bin-default (keyword) face-down
+2026-11-04T17:01:42.783Z  [Client 5] Response: output-bin-supported (keyword) face-down
+2026-11-04T17:01:42.783Z  [Client 5] Response: overrides-supported (1setOf keyword) document-number,pages
+2026-11-04T17:01:42.783Z  [Client 5] Response: page-ranges-supported (boolean) true
+2026-11-04T17:01:42.783Z  [Client 5] Response: pages-per-minute (integer) 0
+2026-11-04T17:01:42.783Z  [Client 5] Response: pdl-override-supported (keyword) attempted
+2026-11-04T17:01:42.783Z  [Client 5] Response: preferred-attributes-supported (boolean) false
+2026-11-04T17:01:42.783Z  [Client 5] Response: print-color-mode-default (keyword) auto
+2026-11-04T17:01:42.783Z  [Client 5] Response: print-color-mode-supported (1setOf keyword) auto,color,monochrome
+2026-11-04T17:01:42.783Z  [Client 5] Response: print-content-optimize-default (keyword) auto
+2026-11-04T17:01:42.783Z  [Client 5] Response: print-content-optimize-supported (keyword) auto
+2026-11-04T17:01:42.783Z  [Client 5] Response: print-rendering-intent-default (keyword) auto
+2026-11-04T17:01:42.783Z  [Client 5] Response: print-rendering-intent-supported (keyword) auto
+2026-11-04T17:01:42.783Z  [Client 5] Response: print-quality-default (enum) normal
+2026-11-04T17:01:42.783Z  [Client 5] Response: print-quality-supported (1setOf enum) draft,normal,high
+2026-11-04T17:01:42.783Z  [Client 5] Response: printer-device-id (textWithoutLanguage) MFG:Test;MDL:Printer;CMD:PDF,JPEG,image/pwg-raster;
+2026-11-04T17:01:42.783Z  [Client 5] Response: printer-get-attributes-supported (keyword) document-format
+2026-11-04T17:01:42.783Z  [Client 5] Response: printer-geo-location (unknown) unknown
+2026-11-04T17:01:42.783Z  [Client 5] Response: printer-icons (uri) https://f92c3983f98d:631/ipp/print/icon.png
+2026-11-04T17:01:42.783Z  [Client 5] Response: printer-info (textWithoutLanguage) Lab Printer
+2026-11-04T17:01:42.783Z  [Client 5] Response: printer-is-accepting-jobs (boolean) true
+2026-11-04T17:01:42.783Z  [Client 5] Response: printer-input-tray (octetString) type=sheetFeedAutoRemovableTray;mediafeed=0;mediaxfeed=0;maxcapacity=250;level=100;status=0;name=main;
+2026-11-04T17:01:42.783Z  [Client 5] Response: printer-location (textWithoutLanguage)
+2026-11-04T17:01:42.783Z  [Client 5] Response: printer-make-and-model (textWithoutLanguage) Test Printer
+2026-11-04T17:01:42.783Z  [Client 5] Response: printer-more-info (uri) https://f92c3983f98d:631/ipp/print
+2026-11-04T17:01:42.783Z  [Client 5] Response: printer-name (nameWithoutLanguage) Lab Printer
+2026-11-04T17:01:42.783Z  [Client 5] Response: printer-organization (textWithoutLanguage) Apple Inc.
+2026-11-04T17:01:42.783Z  [Client 5] Response: printer-organizational-unit (textWithoutLanguage) Printing Engineering
+2026-11-04T17:01:42.783Z  [Client 5] Response: printer-resolution-default (resolution) 600dpi
+2026-11-04T17:01:42.783Z  [Client 5] Response: printer-resolution-supported (resolution) 600dpi
+2026-11-04T17:01:42.783Z  [Client 5] Response: printer-supply (1setOf octetString) index=1;class=receptacleThatIsFilled;type=wasteToner;unit=percent;maxcapacity=100;level=67;colorantname=unknown;,index=2;class=supplyThatIsConsumed;type=toner;unit=percent;maxcapacity=100;level=100;colorantname=black;
+2026-11-04T17:01:42.783Z  [Client 5] Response: printer-supply-description (1setOf textWithoutLanguage) Toner Waste,Black Toner
+2026-11-04T17:01:42.783Z  [Client 5] Response: printer-supply-info-uri (uri) https://f92c3983f98d:631/ipp/print/supplies
+2026-11-04T17:01:42.783Z  [Client 5] Response: printer-uri-supported (uri) ipp://f92c3983f98d:631/ipp/print
+2026-11-04T17:01:42.783Z  [Client 5] Response: printer-uuid (uri) urn:uuid:86592842-7344-310f-7d78-f4b898f1fba1
+2026-11-04T17:01:42.783Z  [Client 5] Response: printer-xri-supported (collection) {xri-authentication=none xri-security=tls xri-uri=ipp://f92c3983f98d:631/ipp/print}
+2026-11-04T17:01:42.783Z  [Client 5] Response: pwg-raster-document-resolution-supported (1setOf resolution) 150dpi,300dpi
+2026-11-04T17:01:42.783Z  [Client 5] Response: pwg-raster-document-sheet-back (keyword) normal
+2026-11-04T17:01:42.783Z  [Client 5] Response: pwg-raster-document-type-supported (1setOf keyword) black_1,cmyk_8,sgray_8,srgb_8,srgb_16
+2026-11-04T17:01:42.783Z  [Client 5] Response: reference-uri-schemes-supported (1setOf uriScheme) file,ftp,http,https
+2026-11-04T17:01:42.783Z  [Client 5] Response: sides-default (keyword) one-sided
+2026-11-04T17:01:42.783Z  [Client 5] Response: sides-supported (keyword) one-sided
+2026-11-04T17:01:42.783Z  [Client 5] Response: uri-authentication-supported (keyword)
+2026-11-04T17:01:42.783Z  [Client 5] Response: uri-security-supported (keyword)
+2026-11-04T17:01:42.783Z  [Client 5] Response: which-jobs-supported (1setOf keyword) completed,not-completed,aborted,all,canceled,pending,pending-held,processing,processing-stopped
+2026-11-04T17:01:42.783Z  [Client 5] Response: printer-config-change-date-time (dateTime) 2026-11-04T16:52:21Z
+2026-11-04T17:01:42.783Z  [Client 5] Response: printer-config-change-time (integer) 0
+2026-11-04T17:01:42.783Z  [Client 5] Response: printer-current-time (dateTime) 2026-11-04T17:01:42Z
+2026-11-04T17:01:42.783Z  [Client 5] Response: printer-state (enum) idle
+2026-11-04T17:01:42.783Z  [Client 5] Response: printer-state-change-date-time (dateTime) 2026-11-04T16:52:21Z
+2026-11-04T17:01:42.783Z  [Client 5] Response: printer-state-change-time (integer) 0
+2026-11-04T17:01:42.783Z  [Client 5] Response: printer-state-message (textWithoutLanguage) Idle.
+2026-11-04T17:01:42.783Z  [Client 5] Response: printer-state-reasons (keyword) none
+2026-11-04T17:01:42.783Z  [Client 5] Response: printer-up-time (integer) 561
+2026-11-04T17:01:42.783Z  [Client 5] Response: queued-job-count (integer) 0
+2026-11-04T17:01:42.784Z  [Client 5] OK
+2026-11-04T17:01:42.784Z  [Client 5] serverRespondHTTP: Sending 7166 bytes of IPP response (Content-Length=7166)
+2026-11-04T17:01:42.784Z  [Client 5] serverRespondHTTP: Sent IPP response.
+2026-11-04T17:01:42.784Z  [Client 5] serverRespondHTTP: Flushing write buffer.
+2026-11-04T17:01:42.796Z  [Client 5] Client closed connection.
+2026-11-04T17:01:42.796Z  [Client 5] Closing connection from "localhost".

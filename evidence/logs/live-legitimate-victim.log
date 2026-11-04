@@ -1,0 +1,33 @@
+Starting system message bus: dbus.
+Wed Nov  4 16:50:05 2026 140737439859648 Reading command line option --debug, turning on debug mode (Log on standard error).
+Wed Nov  4 16:50:05 2026 140737439859648 cups-browsed version 2.0.1 starting.
+Wed Nov  4 16:50:05 2026 140737439859648 Reading config: BrowseRemoteProtocols dnssd cups
+Wed Nov  4 16:50:05 2026 140737439859648 No "Browse..." line at all, accept all servers ("BrowseOrder Deny,Allow").
+Wed Nov  4 16:50:05 2026 140737439859648 main() in THREAD 140737439859648
+Wed Nov  4 16:50:05 2026 140737439859648 cups-browsed: Creating http connection to local CUPS daemon via domain socket: /run/cups/cups.sock
+Wed Nov  4 16:50:05 2026 140737439859648 update_netifs() in THREAD 140737439859648
+Wed Nov  4 16:50:05 2026 140737439859648 Network interfaces: lo (127.0.0.1, localhost), eth0 (172.28.77.20, 01e86b73a6be, 172.28.77.20*), lo (::1)
+Wed Nov  4 16:50:05 2026 140737439859648 cups-browsed [BrowsePoll /run/cups/cups.sock:0]: IPP-Create-Subscription
+Wed Nov  4 16:50:05 2026 140737439859648 cups-browsed [BrowsePoll /run/cups/cups.sock:0]: subscription ID=1
+Wed Nov  4 16:50:05 2026 140737439859648 cups-browsed (): cupsEnumDests
+Wed Nov  4 16:50:05 2026 140737439859648 Could not determine system default printer!
+Wed Nov  4 16:50:05 2026 140737439859648 Using signal handler SIGACTION
+Wed Nov  4 16:50:05 2026 140737439859648 listening
+Wed Nov  4 16:50:33 2026 140737439859648 process_browse_data() in THREAD 140737439859648
+Wed Nov  4 16:50:33 2026 140737439859648 browse packet received from 172.28.77.30
+Wed Nov  4 16:50:33 2026 140737439859648 process_browse_data: location: |Lab Printer|
+Wed Nov  4 16:50:33 2026 140737439859648 process_browse_data: info: |Lab Printer|
+Wed Nov  4 16:50:33 2026 140737439859648 Don't understand URI: ipp://172.28.77.30:631/ipp/print
+Wed Nov  4 16:50:33 2026 140737439859648 listening
+Wed Nov  4 16:51:01 2026 140737439859648 process_browse_data() in THREAD 140737439859648
+Wed Nov  4 16:51:01 2026 140737439859648 browse packet received from 172.28.77.30
+Wed Nov  4 16:51:01 2026 140737439859648 process_browse_data: location: |Lab Printer|
+Wed Nov  4 16:51:01 2026 140737439859648 process_browse_data: info: |Lab Printer|
+Wed Nov  4 16:51:01 2026 140737439859648 Don't understand URI: ipp://172.28.77.30:631/ipp/print
+Wed Nov  4 16:51:01 2026 140737439859648 listening
+Wed Nov  4 16:51:12 2026 140737439859648 process_browse_data() in THREAD 140737439859648
+Wed Nov  4 16:51:12 2026 140737439859648 browse packet received from 172.28.77.30
+Wed Nov  4 16:51:12 2026 140737439859648 process_browse_data: location: |Lab Printer|
+Wed Nov  4 16:51:12 2026 140737439859648 process_browse_data: info: |Lab Printer|
+Wed Nov  4 16:51:12 2026 140737439859648 Don't understand URI: ipp://172.28.77.30:631/ipp/print
+Wed Nov  4 16:51:12 2026 140737439859648 listening

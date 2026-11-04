@@ -1,0 +1,60 @@
+[
+    {
+        "Name": "cups-security-lab_cups-lab",
+        "Id": "2ec3baab1aa415330fabd1ff774170109d3f2b53ac3b9f176e83a40157f6c44f",
+        "Created": "2026-11-04T16:49:58.523787884Z",
+        "Scope": "local",
+        "Driver": "bridge",
+        "EnableIPv4": true,
+        "EnableIPv6": false,
+        "IPAM": {
+            "Driver": "default",
+            "Options": null,
+            "Config": [
+                {
+                    "Subnet": "172.28.77.0/24"
+                }
+            ]
+        },
+        "Internal": true,
+        "Attachable": false,
+        "Ingress": false,
+        "ConfigFrom": {
+            "Network": ""
+        },
+        "ConfigOnly": false,
+        "Containers": {
+            "166a4a97825ba39f6c42d4d48460f91530044f8f752d55b9c1888ebc0fcac3af": {
+                "Name": "cups-victim",
+                "EndpointID": "d99cf7bb045fb4ef4535fa25c6869c3576b9c1463748ebfb115506abff63c6ea",
+                "MacAddress": "1a:14:65:db:b2:50",
+                "IPv4Address": "172.28.77.20/24",
+                "IPv6Address": ""
+            },
+            "1ff104f79531c328c32e98f90f9b1d0bb08088ff040b5babf38073158b62bcea": {
+                "Name": "cups-attacker",
+                "EndpointID": "ca08740b7c42028b5847deaf02c74dc3f2d2be77d1be1f432bb2a3c523676574",
+                "MacAddress": "06:16:e4:56:09:0c",
+                "IPv4Address": "172.28.77.10/24",
+                "IPv6Address": ""
+            },
+            "f92c3983f98da3a51195ebadf17bebce6af18e1174ee0ff07b16763a795fd031": {
+                "Name": "cups-printer",
+                "EndpointID": "5db2110515bd98c045bcd355b335dae9ebb425ffe8d520202cb179e61941b80d",
+                "MacAddress": "4e:2f:e8:8f:26:01",
+                "IPv4Address": "172.28.77.30/24",
+                "IPv6Address": ""
+            }
+        },
+        "Options": {
+            "com.docker.network.enable_ipv4": "true",
+            "com.docker.network.enable_ipv6": "false"
+        },
+        "Labels": {
+            "com.docker.compose.config-hash": "73dd39768b356c9960f07376daf914f460d863d498662416e5ef3d4f28896c5d",
+            "com.docker.compose.network": "cups-lab",
+            "com.docker.compose.project": "cups-security-lab",
+            "com.docker.compose.version": "2.40.3"
+        }
+    }
+]

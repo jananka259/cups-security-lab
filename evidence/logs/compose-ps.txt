@@ -1,0 +1,4 @@
+NAME            IMAGE                        COMMAND                  SERVICE    CREATED          STATUS          PORTS
+cups-attacker   cups-security-lab-attacker   "sleep infinity"         attacker   12 minutes ago   Up 12 minutes
+cups-printer    cups-security-lab-printer    "sh -c 'mkdir -p /ru…"   printer    10 minutes ago   Up 10 minutes
+cups-victim     vulhub/cups-browsed:2.0.1    "bash /docker-entryp…"   victim     2 minutes ago    Up 2 minutes

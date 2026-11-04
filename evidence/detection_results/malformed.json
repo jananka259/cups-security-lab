@@ -1,10 +1,11 @@
 [
   {
     "timestamp": 1793718656.764826,
+    "rule_id": "DISCOVERY-003",
     "type": "malformed_discovery",
     "severity": "high",
     "src": "172.28.77.40",
     "dst": "172.28.77.20",
-    "detail": "fewer than three fields"
+    "detail": "expected 5 fields, received 1"
   }
 ]
