@@ -3,10 +3,11 @@
 ## 1. Introduction
 
 This project investigates insecure legacy CUPS printer discovery in an isolated
-Docker laboratory. The goal is to demonstrate how a crafted UDP/631 browse
-advertisement can cause vulnerable `cups-browsed` to process an attacker
-controlled printer endpoint, and to evaluate Scapy-based detection and an
-allowlist mitigation.
+Docker laboratory. The goal is to investigate whether a crafted UDP/631 browse
+advertisement causes vulnerable `cups-browsed` to contact an advertised
+printer endpoint, and to evaluate Scapy-based detection and an allowlist
+mitigation. These are historical research notes; the final submission is
+[report.tex](./report.tex) and [report.pdf](./report.pdf).
 
 The authoritative assignment is [../assignment.md](../assignment.md). No
 public hosts, physical printers, or uncontrolled networks were used.
@@ -140,6 +141,12 @@ limitation of the legacy browse parser, not an invented successful result.
 Corresponding JSON results are under
 [evidence/detection_results](../evidence/detection_results/).
 
+The seven real PCAPs were subsequently filtered for traffic from victim
+`172.28.77.20` to attacker-advertised endpoint `172.28.77.40`. No matching
+packet was recorded. Therefore successful victim communication with `.40`
+is **not demonstrated** by these captures; this does not rule out traffic
+outside their capture windows. The valid `.30` handshake is separate evidence.
+
 ### Experiment 4: detection evaluation
 
 The detector produced zero alerts for the allowlisted legitimate capture:
@@ -206,7 +213,9 @@ behavior, not the attacker's ability to emit a packet.
 5. PCAP/log output is written. Only `--authorize-lab` permits `send`.
 6. Docker routes the datagram over the internal bridge to `.20`.
 7. cups-browsed parses the browse fields and may create a queue.
-8. CUPS initiates TCP/631 IPP requests to the advertised endpoint.
+8. CUPS may initiate TCP/631 IPP requests to the advertised endpoint. This
+   occurred for legitimate `.30`, but was not observed for attacker-advertised
+   `.40` in the recorded captures.
 
 ### Detection execution
 
@@ -223,8 +232,8 @@ behavior, not the attacker's ability to emit a packet.
 2. cups-browsed loads `BrowseAllow 172.28.77.30`.
 3. An advertisement from `.30` is accepted; `.10` is rejected before queue
    creation.
-4. The victim log records the decision, and no unauthorized IPP request
-   follows the rejected advertisement.
+4. The victim log records the rejection; limited captures do not establish a
+   complete absence of attempted unauthorized IPP connections.
 
 ## 11. Code-reading walkthrough
 
@@ -267,8 +276,9 @@ verified as `172.28.77.10`, and the mitigation was observed in victim logs.
 
 ## 13. Limitations
 
-- GUI screenshots were not fabricated; text evidence and precise screenshot
-  instructions are in [evidence/screenshots/README.txt](../evidence/screenshots/README.txt).
+- Real Wireshark, detector, and mitigation screenshots are now in
+  [evidence/screenshots](../evidence/screenshots/) and in the final LaTeX
+  report; the older screenshot instructions remain as historical notes.
 - Host-level Docker bridge capture is unavailable without elevated macOS
   permissions; namespace captures are the documented workaround.
 - `ippserver` responds at `/ipp/print`, while this cups-browsed legacy parser
@@ -286,11 +296,11 @@ mechanisms are used.
 
 ## 15. Conclusion
 
-The lab demonstrates that vulnerable cups-browsed accepts a legacy printer
-advertisement from an unauthorized source and attempts IPP communication with
-the advertised endpoint. The detector identifies the tested attack classes,
-and the allowlist mitigation accepts `.30` while rejecting `.10`. The evidence
-also shows why discovery acceptance, IPP communication, and successful queue
+The lab demonstrates legitimate discovery and TCP/IPP communication with `.30`,
+but not a victim connection to attacker-advertised `.40`. The unauthorized
+advertisement was transmitted and detected, and the allowlist mitigation
+accepted `.30` while rejecting `.10`. The evidence shows why discovery
+transmission, victim acceptance, IPP communication, and successful queue
 creation must be reported as separate outcomes.
 
 ## 16. References
