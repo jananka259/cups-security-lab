@@ -1,0 +1,17 @@
+# Local development environments and operating-system metadata.
+.venv/
+__pycache__/
+.pytest_cache/
+.DS_Store
+
+# Local collections and rerun outputs are not canonical submission evidence.
+evidence/screenshots.zip
+evidence/detection_results/check-*.json
+
+# LaTeX intermediate files (keep the PDF and .tex).
+*.aux
+*.fdb_latexmk
+*.fls
+*.synctex.gz
+*.toc
+*.out

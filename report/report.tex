@@ -1,0 +1,170 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=24mm]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{listings}
+\usepackage{caption}
+\usepackage{hyperref}
+\usepackage{fancyhdr}
+\pdfmapfile{+cm.map}
+
+\definecolor{ink}{HTML}{18324A}
+\definecolor{linkblue}{HTML}{1765A0}
+\hypersetup{colorlinks=true,linkcolor=linkblue,urlcolor=linkblue,citecolor=linkblue}
+\setlist[itemize]{topsep=3pt,itemsep=2pt}
+\setlist[enumerate]{topsep=3pt,itemsep=2pt}
+\captionsetup{font=small,labelfont=bf}
+\lstset{basicstyle=\ttfamily\footnotesize,breaklines=true,columns=fullflexible,
+  frame=single,rulecolor=\color{black!20},backgroundcolor=\color{black!3},
+  aboveskip=8pt,belowskip=8pt,showstringspaces=false}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small CUPS Printer Discovery Security Lab}
+\fancyhead[R]{\small Individual assignment}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.3pt}
+\setlength{\headheight}{14pt}
+\newcommand{\fig}[3]{\begin{figure}[htbp]\centering\includegraphics[width=\linewidth,height=0.37\textheight,keepaspectratio]{figures/#1}\caption{#2}\label{fig:#3}\end{figure}}
+
+\begin{document}
+\begin{center}
+{\Large\bfseries\color{ink} CUPS Printer Discovery Exploitation and Attack Detection}\par
+\vspace{5pt}
+{\large An Isolated Scapy-Based Security Lab}\par
+\vspace{9pt}
+\textbf{Jananka}\quad | \quad November 2026\par
+\vspace{5pt}
+\url{https://github.com/jananka259/cups-security-lab}
+\end{center}
+
+\begin{abstract}
+This report examines how a vulnerable CUPS service handles printer discovery messages. We built an isolated Docker network with a Scapy attacker, a vulnerable \texttt{cups-browsed} victim, and a virtual IPP printer. We generated normal and modified advertisements, recorded traffic, tested a Scapy detection tool, and applied an allowlist defence. Normal discovery led to a TCP connection and IPP requests, although printer queue creation failed. An unauthorized advertisement was sent and detected, but the available captures do not establish that the victim contacted the attacker-advertised endpoint. The distinction between sending an advertisement, processing it, connecting to a printer, and creating a queue is central to the results.
+\end{abstract}
+
+\section{Introduction and background}
+CUPS manages printing on Unix-like systems. Its legacy \texttt{cups-browsed} discovery mechanism can receive printer announcements over UDP port 631. A discovery message contains an IPP printer URI and descriptive fields. If a service trusts an unverified announcement, it may contact a printer address chosen by another machine. The 2024 CUPS vulnerability family brought attention to this trust boundary \cite{vulhub}.
+
+The assignment asks for a controlled demonstration of printer discovery, a Scapy attack tool, a detector, several packet variations, evidence-based evaluation, and a mitigation \cite{assignment}. Remote code execution is not required and was not attempted.
+
+\section{Lab environment}
+\begin{table}[htbp]\centering\small
+\caption{Isolated Docker lab network (\texttt{172.28.77.0/24}).}
+\begin{tabularx}{\linewidth}{@{}l l X@{}}\toprule
+Role & IP address & Software and function\\\midrule
+Attacker & \texttt{172.28.77.10} & Ubuntu-based container, Python, Scapy, packet capture\\
+Victim & \texttt{172.28.77.20} & Vulhub \texttt{cups-browsed:2.0.1} container\\
+Virtual printer & \texttt{172.28.77.30} & OpenPrinting \texttt{ippserver}, TCP port 631\\\bottomrule
+\end{tabularx}
+\end{table}
+
+The Docker Compose network sets \texttt{internal: true}, uses static addresses, and publishes no service ports to the host. The attacker container receives \texttt{NET\_RAW} for controlled packet construction. The victim image uses \texttt{linux/amd64} on the macOS Docker Desktop host. No public target or physical printer was used. The address \texttt{172.28.77.40} was used as an \emph{advertised attacker-controlled endpoint}; it was not the configured virtual printer at \texttt{.30}.
+
+Key configuration is in \texttt{docker-compose.yml}, \texttt{Dockerfile.printer}, and the mitigation override. Recorded configuration and container status are in \texttt{evidence/logs/} in the repository.
+
+\section{Attack tool: \texttt{cups\_attack.py}}
+The attack tool creates legacy CUPS browse advertisements using Scapy's \texttt{IP / UDP / Raw} layers. A typical payload has five fields: a message type, printer state, IPP URI, display name, and information field. Source and destination UDP ports are 631.
+
+\begin{lstlisting}
+0 3 ipp://172.28.77.40:631/printers/lab "Lab Printer" "Lab Printer"
+\end{lstlisting}
+
+The tool takes command-line options for victim, advertiser, printer IP and port, queue/name, message variation, repetition, interval, PCAP path, and log path. \texttt{--dry-run} writes packets without sending them; live transmission requires \texttt{--authorize-lab}. Input checks keep the destination fixed to the isolated victim and restrict addresses to the lab subnet. Four packet modes are implemented: baseline, missing URI, invalid port, and malformed fields. Repetition is also exercised in the experiments.
+
+\section{Detection tool: \texttt{cups\_detector.py}}
+The detector reads an offline PCAP with Scapy's \texttt{rdpcap} or monitors live packets with \texttt{sniff}. It parses browse fields, checks separate allowlists for sender and advertised printer, records repeated messages, and correlates TCP traffic with advertised endpoints. Its output is structured JSON or CSV.
+
+\begin{table}[htbp]\centering\small
+\caption{Implemented detection rules.}
+\begin{tabularx}{\linewidth}{@{}l X@{}}\toprule
+Rule & Meaning\\\midrule
+\texttt{DISCOVERY-001} & Advertisement sent by an unauthorized source\\
+\texttt{DISCOVERY-002} & Printer host or port not on the permitted list\\
+\texttt{DISCOVERY-003} & Invalid URI, port, field count, or message format\\
+\texttt{DISCOVERY-004} & Same advertisement repeated at least three times within 60 seconds\\
+\texttt{IPP-001} & TCP traffic correlated with an advertised unauthorized IPP endpoint\\\bottomrule
+\end{tabularx}
+\end{table}
+
+The TCP correlation rule exists in the implementation, but these experiments did \emph{not} produce a real \texttt{IPP-001} finding for endpoint \texttt{.40}. This is a coverage limitation of the evidence, not a failure to define the rule.
+
+\section{Experiments and observations}
+\subsection{Experiment 1: legitimate discovery}
+The authorized virtual printer was at \texttt{172.28.77.30:631}. Its advertisement identified the printer URI below:
+\begin{lstlisting}
+ipp://172.28.77.30:631/printers/lab
+\end{lstlisting}
+The capture \path{pcap_files/real/legitimate-clean.pcap} contains discovery traffic, a TCP three-way handshake, and subsequent IPP messages. This establishes that the victim initiated communication with the legitimate advertised endpoint.
+
+\fig{01-legitimate-traffic-overview.png}{Packet list from the legitimate capture, including discovery and TCP/IPP traffic.}{normal-overview}
+\fig{02-tcp-syn-request.png}{TCP SYN from the victim \texttt{.20} to the legitimate printer \texttt{.30:631}.}{syn}
+\fig{03-tcp-syn-ack-response.png}{TCP SYN/ACK returned by the legitimate printer, confirming a response to the connection request.}{synack}
+
+After the handshake the victim requested \texttt{Get-Printer-Attributes}. The response reported an IPP \texttt{client-error-not-found} for the requested \texttt{/printers/lab} resource, even though the HTTP transport returned \texttt{200 OK}. The simulated printer's actual endpoint was \texttt{/ipp/print}; consequently the evidence supports \emph{discovery and IPP communication}, not successful queue creation or printing.
+
+\fig{04-ipp-printer-uri-request.png}{IPP \texttt{Get-Printer-Attributes} request referring to the legitimate printer URI.}{ipp-request}
+\fig{05-ipp-not-found-response.png}{IPP response reports that \texttt{/printers/lab} was not found.}{ipp-response}
+
+\subsection{Experiment 2: unauthorized discovery}
+The attacker at \texttt{172.28.77.10} sent a discovery advertisement to victim \texttt{172.28.77.20}, naming \texttt{172.28.77.40:631} as the printer. The real \texttt{unauthorized.pcap} records that UDP datagram; the detector generated two alerts for unauthorized sender and suspicious advertised endpoint.
+
+\fig{06-unauthorized-advertisement.png}{Unauthorized CUPS browse message from \texttt{.10} to \texttt{.20}, advertising printer \texttt{.40}. Wireshark also marks the legacy payload as malformed in its CUPS dissector.}{unauthorized}
+
+\textbf{Important outcome:} the seven existing real PCAPs were checked for packets with source \texttt{172.28.77.20} and destination \texttt{172.28.77.40}. None were found. Thus these captures \emph{do not demonstrate} a victim connection to the attacker-advertised endpoint. They also do not prove that no attempt could occur outside their capture scope or time window. The normal \texttt{.30} connection cannot be treated as proof of a \texttt{.40} connection.
+
+\subsection{Experiment 3: manipulated advertisements}
+\begin{table}[htbp]\centering\small
+\caption{Measured detector output from real capture files.}
+\begin{tabularx}{\linewidth}{@{}X r r X@{}}\toprule
+Capture / variation & Packets & Alerts & Main result\\\midrule
+\texttt{legitimate-clean.pcap} & 30 & 0 & Authorized baseline\\
+\texttt{unauthorized.pcap} & 1 & 2 & \texttt{001}, \texttt{002}\\
+\texttt{repeated.pcap} & 3 & 7 & Repetition plus sender/endpoint alerts\\
+\texttt{invalid-port.pcap} & 1 & 1 & \texttt{003}: port \texttt{99999}\\
+\texttt{malformed.pcap} & 1 & 1 & \texttt{003}: incorrect field count\\\bottomrule
+\end{tabularx}
+\end{table}
+
+The three manipulated cases were repetition, invalid port, and malformed fields. The code also supports a missing-URI variant, although it is not counted as a separately observed real-capture experiment here.
+
+\subsection{Experiment 4: detection evaluation}
+The legitimate capture produced zero alerts, so no false positive was observed in that baseline. Each of the four attack-oriented capture files produced the expected rule class, so no missed case was observed among this small test set. These results cannot establish a general false-positive or false-negative rate: the captures were short and intentionally constructed. The correlation rule \texttt{IPP-001} was not validated against a captured unauthorized connection.
+
+\fig{07-repeated-discovery-detector-alerts.png}{Detector JSON output showing unauthorized endpoint alerts and a repeated-discovery alert.}{detector}
+
+\section{Mitigation and before/after comparison}
+The mitigation in \texttt{mitigation/cups-browsed.conf} restricts accepted browse advertisements to the legitimate source:
+\begin{lstlisting}
+BrowseRemoteProtocols cups
+BrowseOrder Allow,Deny
+BrowseAllow 172.28.77.30
+\end{lstlisting}
+
+Before mitigation, the unauthorized advertisement was transmitted and observed in a capture. After applying the allowlist, the victim log explicitly recorded a rejection: \texttt{browse packet from} \texttt{172.28.77.10 disallowed}. It also recorded an accepted browse packet from \texttt{172.28.77.30} and subsequent IPP attribute requests. The detector still flags the transmitted attacker packet: an alert indicates suspicious network input, whereas the allowlist controls how the victim handles it. This is why detection and prevention should be evaluated separately.
+
+\fig{08-mitigation-victim-log.png}{Mitigated victim log: unauthorized \texttt{.10} rejected, legitimate \texttt{.30} processed.}{mitigation}
+
+Other possible defences include limiting UDP/631 to trusted networks, disabling unneeded browse functionality, patching vulnerable packages, and network segmentation. Only the allowlist is claimed as implemented and observed in this lab.
+
+\section{Verification, limitations, and ethics}
+The project reports 11 passing Python tests. The tools were also tested against real captures, with JSON detection outputs under \texttt{evidence/detection\_results/}. Packet evidence and victim/printer logs are kept in \texttt{pcap\_files/real/} and \texttt{evidence/logs/}. The five detector command outputs used in Table 3 were recorded by the investigator; this report package does not independently rerun the Docker experiments.
+
+Several limitations matter to interpretation. First, the real attacker advertisement capture contains only the sent datagram; there is no complete victim-to-\texttt{.40} connection trace. Second, the legitimate virtual IPP printer had a URI mismatch that prevented queue creation. Third, Wireshark may mark legacy CUPS browse messages as malformed even when a URI can be extracted. Finally, these few controlled cases do not test every traffic format or network condition.
+
+All testing was confined to private Docker containers, with no external targets, physical printers, payloads for code execution, or persistence. The live packet tool requires an explicit lab authorization flag. The study is intended to understand a trust boundary and evaluate practical detection and defensive configuration.
+
+\section{Conclusion}
+The lab demonstrates the complete normal discovery-to-IPP communication path for a legitimate virtual printer. It also demonstrates creation and detection of unauthorized, repeated, and malformed discovery messages. The allowlist rejects the unauthorized source while allowing the legitimate sender. The available evidence does not show the victim contacting the attacker-advertised \texttt{.40} endpoint, and queue creation for the legitimate \texttt{.30} endpoint was unsuccessful. Reporting these outcomes separately gives a reproducible and appropriately limited answer to the assignment.
+
+\begin{thebibliography}{9}
+\bibitem{assignment} Course assignment, \emph{CUPS Printer Discovery Exploitation and Attack Detection Using Scapy}, \texttt{assignment.md} in the submitted repository, 2026.
+\bibitem{vulhub} Vulhub, \emph{cups-browsed vulnerability lab}, \url{https://github.com/vulhub/vulhub/tree/master/cups-browsed/CVE-2024-47177}.
+\bibitem{scapy} Scapy documentation, \url{https://scapy.readthedocs.io/}.
+\bibitem{cups} Debian manual page, \emph{cups-browsed.conf(5)}, \url{https://manpages.debian.org/bookworm/cups-browsed/cups-browsed.conf.5.en.html}.
+\end{thebibliography}
+\end{document}

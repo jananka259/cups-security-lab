@@ -86,6 +86,14 @@ endpoint is `/ipp/print`; advertising it was captured and measured to produce
 claiming a successful queue. The `/printers/lab` experiment demonstrates the
 vulnerable discovery and subsequent IPP request attempt.
 
+**Attacker-endpoint observation:** the unauthorized advertisement names
+`172.28.77.40:631`, but none of the seven existing real captures contains a
+recorded packet from the victim (`172.28.77.20`) to that endpoint. The capture
+therefore proves that the advertisement was sent, **not** that the victim
+connected to the attacker-controlled endpoint. This does not exclude traffic
+outside the observed capture scope. The legitimate `.30` handshake is separate
+evidence and must not be used as proof of a `.40` connection.
+
 Analyze offline or real captures:
 
 ```bash
@@ -127,7 +135,9 @@ docker compose -f docker-compose.yml -f docker-compose.mitigated.yml down
 the `.30` advertisement and reject the attacker `.10` advertisement. The
 pre/post packet captures remain detectable by the detector; the mitigation
 effect is verified by victim logs showing `browse packet from 172.28.77.10
-disallowed` and by the absence of an unauthorized IPP request.
+disallowed`. The available captures do not establish a complete end-to-end
+absence of unauthorized IPP attempts, so prevention evidence is based on the
+explicit browse rejection log.
 
 ## Tests
 
@@ -158,9 +168,12 @@ correlated IPP connections, JSON/CSV export, and CLI validation.
 - Generated fixtures: [pcap_files/](./pcap_files/)
 - Logs: [evidence/logs/](./evidence/logs/)
 - Detector results: [evidence/detection_results/](./evidence/detection_results/)
-- Screenshot instructions/text evidence: [evidence/screenshots/](./evidence/screenshots/)
-- Report source and PDF: [report/report.md](./report/report.md),
-  [report/report.pdf](./report/report.pdf)
+- Selected Wireshark, detector, and mitigation screenshots:
+  [evidence/screenshots/](./evidence/screenshots/)
+- Final report: [LaTeX source](./report/report.tex),
+  [PDF](./report/report.pdf), and [figure files](./report/figures/).
+- The older [Markdown research notes](./report/report.md) are retained for
+  traceability; the LaTeX/PDF pair is the final submission report.
 
 ## Requirements traceability
 
@@ -173,6 +186,6 @@ correlated IPP connections, JSON/CSV export, and CLI validation.
 | CLI, logging, PCAP export | `cups_attack.py` | Verified | Dry-run and authorized live commands | `evidence/logs/` | None |
 | Unauthorized/suspicious/repeated/malformed detection | `cups_detector.py` | Verified | 11 tests and real captures | `evidence/detection_results/real-*.json` | None |
 | Live/offline and JSON/CSV | `cups_detector.py` | Verified | CLI execution and export tests | `evidence/detection_results/` | None |
-| Experiments and evaluation | Report, captures, tests | Verified with stated limitations | Real capture counts and logs | [report/report.md](./report/report.md) | Add manual screenshots if required |
+| Experiments and evaluation | Report, captures, tests | Verified with stated limitations | Real capture counts, logs, screenshots; `.40` connection not observed | [report/report.pdf](./report/report.pdf) | None beyond stated capture limitation |
 | Mitigation and comparison | Mitigated Compose override | Verified | Authorized `.30` accepted; attacker `.10` disallowed | `evidence/logs/live-mitigated-victim.log` | None |
 | README, requirements, PCAP, evidence, PDF | Repository | Verified | File checks and PDF generation | Root, evidence, report | None |
